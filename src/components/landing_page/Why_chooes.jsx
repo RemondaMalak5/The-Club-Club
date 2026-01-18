@@ -17,7 +17,7 @@ const Why_chooes = () => {
 
   return (
     <div>
-      <section className="px-24n py-5 " >
+      <section className=" py-5 " >
         <Title_2 title={"Why Choose The Club Club?"}/>
         <Title_3 title={"We offer you a complete sports and social experience with the highest quality"}/>
         <div className='flex flex-wrap px-64 gap-4 justify-center py-6'>
