@@ -13,7 +13,7 @@ const Our_Branch = () => {
     const arr = [
         {
             image: assets.branch_6_october, title: "6th of October, Juhayna Square", time: "Open from 8 Am to 12 Am", description: "The Club's main branch is Located at 6 October City near Juhayna Square, in the Dahshur link between Juhayna Square and Al-Wahat Road, on 20 Feddan.",
-            url: ":6-october"
+            url: "6-october"
         },
         { image: assets.branch_el3asma, title: "Ankara st., Sheraton El Matar", time: "Open from 8 Am to 12 Am", description: "The Club's main branch is Located at 6 October City near Juhayna Square, in the Dahshur link between Juhayna Square and Al-Wahat Road, on 20 Feddan." ,
             url: "Sheraton"

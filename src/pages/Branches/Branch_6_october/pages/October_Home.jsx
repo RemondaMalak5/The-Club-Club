@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from '../component/Home/Hero'
 
-const Branch_Home = () => {
+const October_Home = () => {
   return (
     <div>
       <Hero/>
@@ -9,4 +9,4 @@ const Branch_Home = () => {
   )
 }
 
-export default Branch_Home
+export default October_Home

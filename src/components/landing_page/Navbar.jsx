@@ -90,7 +90,6 @@ const Navbar = () => {
     { name: t("Home"), id: "home" },
     { name: t("About"), id: "about" },
     { name: t("Branches"), id: "branches" },
-    { name: t("Compare"), id: "compare" },
     { name: t("Why us?"), id: "why" },
     { name: t("Booking"), id: "booking" },
     { name: t("Gallery"), id: "gallery" },

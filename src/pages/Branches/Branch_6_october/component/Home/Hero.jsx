@@ -3,7 +3,7 @@ import React from 'react'
 const Hero = () => {
   return (
     <div>
-      kjklj
+      6 october
     </div>
   )
 }
