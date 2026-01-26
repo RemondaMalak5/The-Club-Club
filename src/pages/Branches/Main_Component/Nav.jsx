@@ -29,7 +29,9 @@ const Nav = () => {
   const [authenticated, setAuthenticated] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [errorMail, setErrorMail] = useState();
-  const [errorPass, setErrorPass] = useState()
+  const [errorPass, setErrorPass] = useState();
+  const location = useLocation();
+const currentBranch = location.pathname.split("/")[2] || "";
 
     const changeLanguage = (lng) => {
     i18next.changeLanguage(lng);
@@ -156,13 +158,9 @@ const Nav = () => {
   const [isOpen_r, setIsOpen_r] = useState(false);
   const login = () => setIsOpen_t(!isOpen_t);
   const register = () => setIsOpen_r(!isOpen_r);
-
-
   const dropdownRef_login = useRef();
   const dropdownRef_r = useRef();
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
   const isAboutActive = location.pathname.startsWith("/about");
 
   const isSportsActive = location.pathname.startsWith("/Sports");
@@ -281,7 +279,7 @@ const Nav = () => {
 
             <div className="flex flex-col md:flex-row gap-2 md:gap-6 items-start md:items-center text-sm font-medium w-full">
               <NavLink
-                to="/"
+                to={`/branches/${currentBranch}/`}
                 className={({ isActive }) =>
                   isActive ? "text-[#56c6cc] font-bold" : "hover:text-[#56c6cc]"
                 }
@@ -355,7 +353,7 @@ const Nav = () => {
               </div>
 
               <NavLink
-                to="/Loyalty"
+                to={`/branches/${currentBranch}/Loyalty`}
                 className={({ isActive }) =>
                   isActive ? "text-[#56c6cc] font-bold" : "hover:text-[#56c6cc]"
                 }
@@ -364,7 +362,7 @@ const Nav = () => {
               </NavLink>
             
                <NavLink
-                to="/services"
+                to={`/branches/${currentBranch}/Services`}
                 className={({ isActive }) =>
                   isActive ? "text-[#56c6cc] font-bold" : "hover:text-[#56c6cc]"
                 }
@@ -372,7 +370,7 @@ const Nav = () => {
                 {t("services")}
               </NavLink>
               <NavLink
-                to="/News"
+  to={`/branches/${currentBranch}/News`}
                 className={({ isActive }) =>
                   isActive ? "text-[#56c6cc] font-bold" : "hover:text-[#56c6cc]"
                 }
@@ -381,7 +379,7 @@ const Nav = () => {
               </NavLink>
 
               <NavLink
-                to="/Championships"
+                to={`/branches/${currentBranch}/Championships`}
                 className={({ isActive }) =>
                   isActive ? "text-[#56c6cc] font-bold" : "hover:text-[#56c6cc]"
                 }

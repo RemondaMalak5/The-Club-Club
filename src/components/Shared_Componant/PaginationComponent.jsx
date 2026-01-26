@@ -1,11 +1,12 @@
-import Pagination from "@mui/material/Pagination";
-import PaginationItem from "@mui/material/PaginationItem";
-// import Stack from "@mui/material/Stack";
-// import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-// import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+
+import Stack from "@mui/material/Stack";
 import { useEffect, useLayoutEffect, useState } from "react";
 import i18next from "i18next";
-import { Stack } from "@mui/material";
+import Pagination from "@mui/material/Pagination";
+import PaginationItem from "@mui/material/PaginationItem";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack"; // صح
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward"; // لو محتاجها
+
 
 const PaginationComponent = ({
   currentPage,
