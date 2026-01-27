@@ -16,7 +16,7 @@ const Footer = () => {
       <div className='py-16 flex flex-wrap text-white'>
         <div className='md:w-1/4 sm:w-1/2 w-full ps-10 flex flex-col gap-1 '>
           <div className="flex  ">
-            <img src={assets.logo1} alt="logo" className="w-20 h-20" />
+            <img src={assets.theClub_Logo} alt="logo" className="w-20 h-20" />
             <h1 className='text-[25px] flex items-center' >{t("The Club Club")}</h1></div>
           <div className="text-[#D1D5DC] text-[16px] p-2">
             <p>The first commercial Project affiliated with the Ministry of Youth and Sports directly and managed by the private sector (UFC GYM EGYPT). We are planning to expand to Egypt.</p>

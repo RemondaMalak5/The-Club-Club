@@ -1,44 +1,3 @@
-// import i18next from 'i18next';
-// import React, { useEffect, useState } from 'react'
-// import { useTranslation } from 'react-i18next';
-// import { mainUrl } from '../../axiosConfig/Instance';
-// import { our_club } from '../../axiosConfig/APIs/ourClub/Our_club';
-
-// const Video_home = () => {
-//    const { t } = useTranslation();
-//     const [data, setData] = useState([]);
-//     const ourClub_api = async () => {
-//        const params = {
-//           lang: i18next.language,
-//           branch: "نادي النادي - 6 اكتوبر",
-//         };
-//       try {
-//         const response = await our_club(params);
-//         setData(response?.message?.[0]);
-//       } catch (error) {
-//         console.error("error :", error);
-//       }
-//     };
-//     useEffect(()=>{
-//       ourClub_api() ;
-//     }, [i18next.language])
-//   return (
-//     <div className='video flex justify-center items-center'>
-//         <video
-//       src={`${mainUrl}${data?.video}`}
-//       controls
-//       autoPlay
-//       muted
-//       loop
-//       className="w-[70%] rounded-2xl shadow-lg h-96"
-//     />
-//     </div>
-//   )
-// }
-
-// export default Video_home
-
-
 import i18next from "i18next";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -82,7 +41,7 @@ const Video_home = () => {
           autoPlay
           muted
           loop
-          className="w-[60%] rounded-2xl shadow-lg h-[80%] my-5 border-2 border-[#21857C]"
+          className="w-[60%] rounded-2xl shadow-lg h-96 my-5 border-2 border-[#21857C]"
         />
       ) : (
         <p className="text-gray-500">{t("loading_video")}</p>

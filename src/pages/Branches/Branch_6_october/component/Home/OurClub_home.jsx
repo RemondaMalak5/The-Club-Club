@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import assets from "./../../assets/assets";
 import { useTranslation } from "react-i18next";
 import { our_club } from "./../../axiosConfig/APIs/ourClub/Our_club";
 import DOMPurify from "dompurify";
@@ -8,7 +7,7 @@ import { FaBullseye, FaLocationDot } from "react-icons/fa6";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaChartArea } from "react-icons/fa6";
 import { HiMiniArrowTrendingUp } from "react-icons/hi2";
-import Title_1 from "../Shared_Components/Title_1";
+import Title_1 from "../../../../../components/Shared_Componant/Title_1";
 
 
 const OurClub_home = () => {
@@ -43,11 +42,11 @@ useEffect(() => {
   ]
 
   return (
-    <section className="px-24" dir={i18next.language !== "ar" ? "ltr" : "rtl"}>
-      <Title_1 title={t("our_club")}/>
+    <section className="px-24 py-5" dir={i18next.language !== "ar" ? "ltr" : "rtl"}>
+      <Title_1 title={t("About_our_club")}/>
       <div className="flex flex-col gap-4 pt-2">
         {data?.map((item, index) => (
-          <div key={index} className="text-gray-600 text-center">
+          <div key={index} className="text-gray-600 text-center ">
             <div dangerouslySetInnerHTML={{ __html: cleanDescription }} />
           </div>
         ))}

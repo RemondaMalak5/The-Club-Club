@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react';
-// import { get_club_championships } from '../../axiosConfig/APIs/Championships/Championships';
+import { get_club_championships } from '../../axiosConfig/APIs/Championships/Championships';
 import { useTranslation } from "react-i18next";
-// import { mainUrl } from '../../axiosConfig/Instance';
+import { mainUrl } from '../../axiosConfig/Instance';
 import { Link, useParams } from 'react-router';
 import i18next from 'i18next';
 import { HiMiniCalendarDateRange } from 'react-icons/hi2';

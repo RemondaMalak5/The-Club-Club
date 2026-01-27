@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router';
 import assets from '../../../../../assets/assets';
 import Title_1 from '../../../../../components/Shared_Componant/Title_1';
 
-const Services_home = () => {
+const  Services_home = () => {
     const [t] = useTranslation();
     const navigate = useNavigate();
     const arr = [

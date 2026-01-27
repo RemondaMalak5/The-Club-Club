@@ -8,16 +8,15 @@ import {
   MdClose,
   MdMenu,
 } from "react-icons/md";
-// import Main_Register from "../Registration/Register/Main_Register";
 // import { user_login } from "../../axiosConfig/APIs/Auth/login/login";
 import Cookies from "js-cookie";
-// import Close_Form from "../Shared_Components/Close_Form";
-// import { IoEye, IoEyeOff } from "react-icons/io5";
+import { IoEye, IoEyeOff } from "react-icons/io5";
 // import { Get_academies_list } from "../../axiosConfig/APIs/Academy/academies_list";
 import i18next from "i18next";
 import assets from "../../../assets/assets";
 import Social_Media from "../../../components/Shared_Componant/Social_Media";
 import LoaderSpinner from "../../../components/Shared_Componant/LoaderSpinner";
+import Close_Form from "../../../components/Shared_Componant/Close_Form";
 
 const Nav = () => {
   const {  t } = useTranslation();
@@ -259,7 +258,7 @@ const currentBranch = location.pathname.split("/")[2] || "";
         <nav className="bg-white text-[#444] shadow-md px-4 lg:px-20  top-0 w-full z-10">
           <div className="flex items-center justify-between py-1 md:hidden ">
             <Link to="/">
-              <img src={assets.logo1} alt="Logo" className="w-16" />
+              <img src={assets.theClub_Logo} alt="Logo" className="w-16 " />
             </Link>
             <button
               className="text-2xl"
@@ -273,8 +272,8 @@ const currentBranch = location.pathname.split("/")[2] || "";
             className={`${isMenuOpen ? "block" : "hidden"
               } md:flex items-center justify-between  gap-6  py-1 `}
           >
-            <Link to="/" className="hidden md:block ">
-              <img src={assets.logo1} alt="Logo" className="w-16" />
+            <Link to={`/branches/${currentBranch}/`} className="hidden md:block ">
+              <img src={assets.theClub_Logo} alt="Logo" className="w-16" />
             </Link>
 
             <div className="flex flex-col md:flex-row gap-2 md:gap-6 items-start md:items-center text-sm font-medium w-full">
@@ -387,7 +386,7 @@ const currentBranch = location.pathname.split("/")[2] || "";
                 {t("Championships")}
               </NavLink>
 
-              <div className="relative">
+              {/* <div className="relative">
                 <button
                   onClick={() => setIsOpenSports(!isOpenSports)}
                   className={`flex items-center gap-1 transition-colors ${isSportsActive
@@ -416,14 +415,14 @@ const currentBranch = location.pathname.split("/")[2] || "";
                     ))}
                   </div>
                 )}
-              </div>
+              </div> */}
 
-              <Link to="/booking" className="hover:text-[#56c6cc]">
+              {/* <Link to="/booking" className="hover:text-[#56c6cc]">
                 {t("Booking")}
-              </Link>
+              </Link> */}
             </div>
 
-            {/* {authenticated ? <div className="flex gap-2   w-[400px] ps-0 ms-0">
+            {authenticated ? <div className="flex gap-2   w-[400px] ps-0 ms-0">
               <button
                 onClick={() => { handle_logout() }}
                 className="bg-gray-200 hover:bg-gray-300 duration-300 text-black px-4 py-1  rounded-[8px] "
@@ -510,10 +509,10 @@ const currentBranch = location.pathname.split("/")[2] || "";
                   >
                     {t("Register")}
                   </button>
-                  <Main_Register isOpen_r={isOpen_r} setIsOpen_r={setIsOpen_r} setIsOpen_t={setIsOpen_t} />
+                  {/* <Main_Register isOpen_r={isOpen_r} setIsOpen_r={setIsOpen_r} setIsOpen_t={setIsOpen_t} /> */}
                 </div>
               </div>
-            } */}
+            }
           </div>
         </nav>
       </div>
@@ -522,14 +521,4 @@ const currentBranch = location.pathname.split("/")[2] || "";
 };
 
 export default Nav;
-// import React from 'react'
 
-// const Nav = () => {
-//   return (
-//     <div>
-//       nav
-//     </div>
-//   )
-// }
-
-// export default Nav

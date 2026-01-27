@@ -1,10 +1,10 @@
 // NewsContant.jsx
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router'
-// import { News_content } from '../../axiosConfig/APIs/News/News_content';
+import { News_content } from '../../axiosConfig/APIs/News/News_content';
 import { useTranslation } from "react-i18next";
 import DOMPurify from 'dompurify';
-// import { mainUrl } from './../../axiosConfig/Instance';
+import { mainUrl } from './../../axiosConfig/Instance';
 import i18next from 'i18next';
 import { HiMiniCalendarDateRange } from 'react-icons/hi2';
 import PaginationComponent from '../../../../../components/Shared_Componant/PaginationComponent';

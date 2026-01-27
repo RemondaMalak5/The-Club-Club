@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import { getSlider } from '../../axiosConfig/APIs/slider/slider';
+import { getSlider } from '../../axiosConfig/APIs/slider/slider';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -39,7 +39,7 @@ const Hero = () => {
             <img
               src={src.attach_opwg}
               alt={`Slide ${index}`}
-              className="w-full h-[70vh]"
+              className="w-full h-[80vh]"
             />
             <div className='flex justify-center items-center '>
               <div className='flex flex-col  absolute top-[35%] text-center text-white'>

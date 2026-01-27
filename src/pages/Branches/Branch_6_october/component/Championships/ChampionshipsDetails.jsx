@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router';
 import { mainUrl } from '../../axiosConfig/Instance';
 import DOMPurify from "dompurify";
-// import { Championships_Details } from './../../axiosConfig/APIs/Championships/championshipDetails';
+import { Championships_Details } from './../../axiosConfig/APIs/Championships/championshipDetails';
 import LoaderSpinner from '../Shared_Components/LoaderSpinner';
 import i18next from 'i18next';
 import assets from '../../../../../assets/assets';

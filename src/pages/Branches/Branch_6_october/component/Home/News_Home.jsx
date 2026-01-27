@@ -2,12 +2,12 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from 'react-router-dom';
-// import { mainUrl } from "../../axiosConfig/Instance";
-// import { News_content } from "../../axiosConfig/APIs/News/News_content";
+import { News_content } from "../../axiosConfig/APIs/News/News_content";
 import i18next from "i18next";
 import { HiMiniArrowTrendingUp, HiMiniCalendarDateRange } from "react-icons/hi2";
 import Btn_1 from "../../../../../components/Shared_Componant/Btn_1";
 import Title_1 from "../../../../../components/Shared_Componant/Title_1";
+import { mainUrl } from "../../axiosConfig/Instance";
 
 
 const News_Home = () => {

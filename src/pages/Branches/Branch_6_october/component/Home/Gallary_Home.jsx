@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-// import { gallary } from "../../axiosConfig/APIs/Gallary/gallary";
+import { gallary } from "../../axiosConfig/APIs/Gallary/gallary";
 import i18next from "i18next";
 import { GoArrowUpLeft, GoArrowUpRight } from "react-icons/go";
 import Title_1 from "../../../../../components/Shared_Componant/Title_1";
+import { mainUrl } from "../../axiosConfig/Instance";
 
 const Gallary_Home = () => {
   const { t } = useTranslation();
@@ -25,11 +26,10 @@ const Gallary_Home = () => {
   }, [i18next.language]);
 
   const arr = [
-    // { image: `${mainUrl}${data?.gallery}`, title: "event", description: "hello" },
-    // { image: `${mainUrl}${data?.gallery}`, title: "event", description: "hello" },
-    // { image: `${mainUrl}${data?.gallery}`, title: "event", description: "hello" },
-    // { image: `${mainUrl}${data?.gallery}`, title: "event", description: "hello" },
-
+    { image: `${mainUrl}${data?.gallery}`, title: "event", description: "hello" },
+    { image: `${mainUrl}${data?.gallery}`, title: "event", description: "hello" },
+    { image: `${mainUrl}${data?.gallery}`, title: "event", description: "hello" },
+    { image: `${mainUrl}${data?.gallery}`, title: "event", description: "hello" },
   ]
 
   return (

@@ -1,36 +1,36 @@
 
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router'
-// import { offers_content } from '../../axiosConfig/APIs/offers/offers_content';
+import { offers_content } from '../../axiosConfig/APIs/offers/offers_content';
 import { useTranslation } from "react-i18next";
 import DOMPurify from "dompurify";
-// import { mainUrl } from './../../axiosConfig/Instance';
+import { mainUrl } from './../../axiosConfig/Instance';
 import i18next from 'i18next';
 import { HiMiniCalendarDateRange } from 'react-icons/hi2';
-import Pagination from '../../../../../components/Shared_Componant/Pagination';
 import Error_Template from '../../../../../components/Shared_Componant/Error_Template';
 import Btn_1 from '../../../../../components/Shared_Componant/Btn_1';
+import PaginationComponent from '../../../../../components/Shared_Componant/PaginationComponent';
 
 const LoyaltyContent = () => {
 
   const { t } = useTranslation();
 
-  // const [data, setData] = useState(null);
-  // const [error, seterror] = useState(false);
-  // const offers_content_Api = async () => {
-  //   const params = {
-  //     "lang": i18next.language,
-  //     "branch": "نادي النادي - 6 اكتوبر"
-  //   }
-  //   try {
-  //     const response = await offers_content(params);
-  //     console.log("response : ", response)
-  //     setData(response.message);
-  //   } catch (error) {
-  //     console.log("error : ", error)
-  //     seterror(true);
-  //   }
-  // }
+  const [data, setData] = useState(null);
+  const [error, seterror] = useState(false);
+  const offers_content_Api = async () => {
+    const params = {
+      "lang": i18next.language,
+      "branch": "نادي النادي - 6 اكتوبر"
+    }
+    try {
+      const response = await offers_content(params);
+      console.log("response : ", response)
+      setData(response.message);
+    } catch (error) {
+      console.log("error : ", error)
+      seterror(true);
+    }
+  }
 
   const itemsPerPage = 5;
   const [currentPage, setCurrentPage] = useState(1);
@@ -41,22 +41,22 @@ const LoyaltyContent = () => {
     ALLOWED_ATTR: [], // Remove all attributes like class, style, etc.
   });
 
-  // const currentItems = arr.slice(indexOfFirstItem, indexOfLastItem);
+const currentItems = data?.slice(indexOfFirstItem, indexOfLastItem) || [];
 
-  // useEffect(() => {
-  //   window.scrollTo({
-  //     top: 0,
-  //     behavior: "smooth",
-  //   });
-  //   offers_content_Api();
-  // }, [i18next.language])
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    offers_content_Api();
+  }, [i18next.language])
 
   return (
     <section>
       <div className='w-full md:px-28 p-10' >
         <h2 className='text-3xl mb-5 text-[#014e52]'>{t("Title")} </h2>
 
-        {/* <div className='flex flex-wrap'>
+        <div className='flex flex-wrap'>
           {data ? <>
             {data?.map((e, index) => (
               <Link to={`/News/${e.news_id}`} className="xl:w-1/3 w-full px-2 py-2" key={index}>
@@ -87,8 +87,8 @@ const LoyaltyContent = () => {
               <Error_Template/>
             </div>
           }
-        </div> */}
-        <Pagination
+        </div>
+        <PaginationComponent
           array_items={data}
           itemsPerPage={itemsPerPage}
           indexOfFirstItem={indexOfFirstItem}
