@@ -59,7 +59,7 @@ const NewsContant = () => {
         <div className='flex flex-wrap w-full'>
           {data ? <>
              {data?.map((e, index) => (
-                                <Link to={`/News/${e.news_id}`} className="xl:w-1/3 w-full px-2 py-2" key={index}>
+                                <Link to={`/branches/6-october/News/${e.news_id}`} className="xl:w-1/3 w-full px-2 py-2" key={index}>
                                     <div className="bg-white border border-gray-200 rounded-2xl shadow-md overflow-hidden " key={index}>
                                         <img
                                             src={`${mainUrl}${e.image}`}
@@ -87,15 +87,7 @@ const NewsContant = () => {
 
         </div>
 
-        {/* ✨ مكون الـ pagination */}
-        {/* <Pagination
-          array_items={data}
-          itemsPerPage={itemsPerPage}
-          indexOfFirstItem={indexOfFirstItem}
-          indexOfLastItem={indexOfLastItem}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-        /> */}
+      
         <PaginationComponent
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}

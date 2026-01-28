@@ -127,7 +127,7 @@ import React from 'react'
 import { RiCoinsLine } from "react-icons/ri";
 import { IoInformationCircleOutline } from "react-icons/io5";
 import { MdOutlineDateRange } from "react-icons/md";
-import assets from '../../assets/assets';
+import assets from '../../../../../assets/assets';
 
 const Services_detail_contant = () => {
 

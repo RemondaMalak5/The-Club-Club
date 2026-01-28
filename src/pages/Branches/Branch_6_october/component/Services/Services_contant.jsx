@@ -91,10 +91,10 @@
 // export default Services_contant
 import React, { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router';
 import i18next from 'i18next';
 import assets from '../../../../../assets/assets';
 import PaginationComponent from '../../../../../components/Shared_Componant/PaginationComponent';
+import { useNavigate } from 'react-router-dom';
 
 const Services_contant = () => {
   const [t] = useTranslation();
@@ -181,7 +181,7 @@ const Services_contant = () => {
                 <p className="text-gray-600 mb-4">{item.description}</p>
 
                 <button
-                  onClick={() => navigate("/services_details")}
+                  onClick={() => navigate("/branches/6-october/Services/services_details")}
                   className="px-4 py-2 text-[#21857C] rounded-2xl border border-[#21857C] w-full hover:bg-[#21857C] hover:text-white transition-all duration-300"
                 >
                   Learn More

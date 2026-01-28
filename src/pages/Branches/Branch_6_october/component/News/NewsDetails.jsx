@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import assets from '../../assets/assets'
 import { News_detais } from '../../axiosConfig/APIs/News/News_details';
 import { useTranslation } from 'react-i18next';
 import { Link, useParams } from 'react-router';
@@ -44,7 +43,7 @@ const NewsDetails = () => {
 
   return (
     <section className='px-7'>
-       <Link to="/services" className=' flex gap-2 pb-2 text-[#035657]'>
+       <Link to="/branches/6-october/News" className=' flex gap-2 pb-2 text-[#035657]'>
         {i18next.language === 'ar' ? <FaArrowRight className='py-1 text-2xl' />
           : <FaArrowLeft className='py-1 text-2xl' />}
         <p >Back to News</p>

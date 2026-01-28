@@ -41,7 +41,7 @@ const News_Home = () => {
         <p className=" text-gray-600 text-center text-2xl">Stay informed with the latest news, achievements, and announcements from our club</p>
          <div className='flex flex-wrap py-5 w-full px-9'>
                 {data?.map((e, index) => (
-                    <Link to={`/News/${e.news_id}`} className="xl:w-1/3 md:w-1/2 w-full px-2 " key={index}>
+                    <Link to={`/branches/6-october/News/${e.news_id}`} className="xl:w-1/3 md:w-1/2 w-full px-2 " key={index}>
                         <div className="bg-white border border-gray-200 rounded-2xl shadow-md overflow-hidden " key={index}>
                             <img
                                 src={`${mainUrl}${e.image}`}

@@ -8,67 +8,45 @@ import BranchLayout from "./pages/Branches/Layout/BranchLayout";
 import Services from "./pages/Branches/Branch_6_october/pages/Services";
 import Championships from "./pages/Branches/Branch_6_october/pages/Championships";
 import Loyalty from "./pages/Branches/Branch_6_october/pages/Loyalty";
+import NewsDetails from "./pages/Branches/Branch_6_october/component/News/NewsDetails";
+import Services_details from "./pages/Branches/Branch_6_october/component/Services/Services_details";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Landing_page />,
   },
-  // {
-  //   path: "branches",
-  //   element: <Main_Layout />,
-  //   children: [
-  //     {
-  //       path: "6-october",
-  //       element: <October_Layout/>,
-  //         children: [
-  //         {
-  //           index: true,
-  //           element: <October_Home />,
-  //         },
-  //         {
-  //           path: "News",
-  //           element: <News />,
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       path: "Sheraton",
-  //       element: <New_Capital_Home/>,
-  //     },{
-  //       path: "Capital",
-  //       element: <New_Capital_Home/>,
-  //     },
-  //   ],
-  // },
+
   {
-  path: "branches",
-  element: <Main_Layout />,
-  children: [
-    {
-      element: <BranchLayout/>,
-      children: [
-        {
-          path: "6-october",
-          children: [
-            { index: true, element: <October_Home /> },
-            { path: "News", element: <News /> },
-            { path: "Loyalty", element: <Loyalty/> },
-            { path: "Championships", element: <Championships/> },
-            { path: "Services", element: <Services/> },
-          ],
-        },
-        {
-          path: "Sheraton",
-          children: [
-            { index: true, element: <New_Capital_Home /> },
-            { path: "News", element: <News /> },
-          ],
-        },
-      ],
-    },
-  ],
-}
+    path: "branches",
+    element: <Main_Layout />,
+    children: [
+      {
+        element: <BranchLayout />,
+        children: [
+          {
+            path: "6-october",
+            children: [
+              { index: true, element: <October_Home /> },
+              { path: "News", element: <News /> },
+              { path: "Loyalty", element: <Loyalty /> },
+              { path: "Championships", element: <Championships /> },
+              { path: "News/:id", element: <NewsDetails /> },
+              { path: "Services", element: <Services />},
+              {path: "Services/services_details", element: <Services_details />}
+            ],
+          },
+          {
+            path: "Sheraton",
+            children: [
+              { index: true, element: <New_Capital_Home /> },
+              { path: "News", element: <News /> },
+            ],
+          },
+        ],
+      },
+    ],
+  }
 
 ]);
 
