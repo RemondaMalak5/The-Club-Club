@@ -11,7 +11,7 @@ const Services_details = () => {
   const {  } = useTranslation();
   return (
     <div className='px-10'>
-      <Link to="/services" className=' flex gap-2 pb-2 text-[#035657]'>
+      <Link to="/branches/6-october/Services" className=' flex gap-2 pb-2 text-[#035657]'>
         {i18next.language === 'ar' ? <FaArrowRight className='py-1 text-2xl' />
           : <FaArrowLeft className='py-1 text-2xl' />}
         <p >Back to services</p>

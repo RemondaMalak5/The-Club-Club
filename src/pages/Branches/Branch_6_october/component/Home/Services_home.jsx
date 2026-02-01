@@ -18,7 +18,7 @@ const  Services_home = () => {
         <div className='bg-[#E9F0F0] px-10 py-10'>
             <Title_1 title={"Our Services"} />
             <p className='text-gray-600 text-center text-2xl'>Discover our comprehensive range of sports and fitness services designed to help you excel.</p>
-            <div className='flex flex-wrap py-5 w-full ' onClick={()=>navigate("/services_details")}>
+            <div className='flex flex-wrap py-5 w-full '>
                 {arr.map((e, index) => (
                     <div className="xl:w-1/3 md:w-1/2 w-full px-2" key={index}>
                         <div className="bg-white border border-gray-200 rounded-2xl shadow-md overflow-hidden " key={index}>
@@ -31,7 +31,7 @@ const  Services_home = () => {
                                 <h5 className="text-lg font-semibold mb-2 text-gray-800">{e.title} </h5>
                                 <p className="text-gray-600 mb-4">
                                     {e.description}                            </p>
-                                <button className="px-4 py-2  text-[#21857C] rounded-2xl border border-[#21857C] w-full hover:bg-[#21857C] hover:text-white transition-all duration-300">
+                                <button onClick={()=>navigate("/branches/6-october/Services/services_details")} className="px-4 py-2  text-[#21857C] rounded-2xl border border-[#21857C] w-full hover:bg-[#21857C] hover:text-white transition-all duration-300">
                                     learn more
                                 </button>
                             </div>
@@ -40,7 +40,7 @@ const  Services_home = () => {
                 ))}
             </div>
             <div className="flex justify-center items-center pt-3">
-                <button onClick={()=>navigate("/services")}
+                <button onClick={()=>navigate("/branches/6-october/services")}
                  className=" px-5 py-1 text-lg flex  text-[#21857C] hover:bg-[#21857C] hover:text-white rounded-lg border-2 border-[#21857C]" > {t("see_more")}
                     {i18next.language !== "ar" ? (
                         <HiMiniArrowTrendingUp className="m-1" />

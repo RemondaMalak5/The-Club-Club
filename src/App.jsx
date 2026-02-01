@@ -10,6 +10,7 @@ import Championships from "./pages/Branches/Branch_6_october/pages/Championships
 import Loyalty from "./pages/Branches/Branch_6_october/pages/Loyalty";
 import NewsDetails from "./pages/Branches/Branch_6_october/component/News/NewsDetails";
 import Services_details from "./pages/Branches/Branch_6_october/component/Services/Services_details";
+import ChampionshipsDetails from "./pages/Branches/Branch_6_october/component/Championships/ChampionshipsDetails";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
               { path: "News", element: <News /> },
               { path: "Loyalty", element: <Loyalty /> },
               { path: "Championships", element: <Championships /> },
+              {path: "Championships/:id", element: <ChampionshipsDetails/> },
               { path: "News/:id", element: <NewsDetails /> },
               { path: "Services", element: <Services />},
               {path: "Services/services_details", element: <Services_details />}

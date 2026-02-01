@@ -45,7 +45,7 @@ const ChampionshipsLatest = () => {
           {data ?
          <div className=' flex flex-wrap   '>
           {data?.map((e, index) => (
-            <Link to={`/events/${e.champ_id}`} className="xl:w-1/3 w-full px-2 " key={index}>
+            <Link to={`/branches/6-october/Championships/${e.champ_id}`} className="xl:w-1/3 w-full px-2 " key={index}>
               <div className="bg-white border border-gray-200 rounded-2xl shadow-md overflow-hidden " >
                 <img
                   src={`${mainUrl}${e.image}`}

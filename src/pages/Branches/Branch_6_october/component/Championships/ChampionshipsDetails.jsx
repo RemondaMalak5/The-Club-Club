@@ -5,7 +5,6 @@ import { useParams } from 'react-router';
 import { mainUrl } from '../../axiosConfig/Instance';
 import DOMPurify from "dompurify";
 import { Championships_Details } from './../../axiosConfig/APIs/Championships/championshipDetails';
-import LoaderSpinner from '../Shared_Components/LoaderSpinner';
 import i18next from 'i18next';
 import assets from '../../../../../assets/assets';
 
@@ -68,7 +67,7 @@ const ChampionshipsDetails = () => {
         </div>
         {(() => {
 
-          const styleObj = i18n.language !== "ar"
+          const styleObj = i18next.language !== "ar"
             ? { clipPath: "polygon(100% 0,100% 100%,0 100%,22% 71%,0 0)" }
             : { clipPath: "polygon(0% 0%, 100% 0, 74% 71%, 100% 100%, 0% 100%)" };
           return (
