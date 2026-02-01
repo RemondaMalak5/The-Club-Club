@@ -1,6 +1,5 @@
 
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router'
 import { offers_content } from '../../axiosConfig/APIs/offers/offers_content';
 import { useTranslation } from "react-i18next";
 import DOMPurify from "dompurify";
@@ -10,6 +9,7 @@ import { HiMiniCalendarDateRange } from 'react-icons/hi2';
 import Error_Template from '../../../../../components/Shared_Componant/Error_Template';
 import Btn_1 from '../../../../../components/Shared_Componant/Btn_1';
 import PaginationComponent from '../../../../../components/Shared_Componant/PaginationComponent';
+import { Link } from 'react-router-dom';
 
 const LoyaltyContent = () => {
 
@@ -59,7 +59,7 @@ const currentItems = data?.slice(indexOfFirstItem, indexOfLastItem) || [];
         <div className='flex flex-wrap'>
           {data ? <>
             {data?.map((e, index) => (
-              <Link to={`/News/${e.news_id}`} className="xl:w-1/3 w-full px-2 py-2" key={index}>
+              <Link to={`/branches/6-october/LoyaltyDetails/${e.offers_id}`} className="xl:w-1/3 w-full px-2 py-2" key={index}>
                 <div className="bg-white border border-gray-200 rounded-2xl shadow-md overflow-hidden " key={index}>
                   <div className={`absolute  ${i18next.language === "en" ? " rounded-br-xl" : " rounded-bl-xl"
                     } bg-yellow-300 text-sm font-bold text-black px-3 py-1 z-10`}>

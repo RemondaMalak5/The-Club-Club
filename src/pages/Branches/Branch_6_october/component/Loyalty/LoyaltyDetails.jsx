@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import assets from "./../../assets/assets";
 import { useTranslation } from "react-i18next";
-import Error_Template from "../Shared_Components/Error_Template";
 import { offers_detais } from "../../axiosConfig/APIs/offers/offers_detais";
 import { useParams } from "react-router";
 import { mainUrl } from "../../axiosConfig/Instance";
 import  DOMPurify  from 'dompurify';
 import i18next from "i18next";
+import assets from "../../../../../assets/assets";
 
 const LoyaltyDetails = () => {
   const { t } = useTranslation();

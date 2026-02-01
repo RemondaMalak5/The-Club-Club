@@ -11,6 +11,7 @@ import Loyalty from "./pages/Branches/Branch_6_october/pages/Loyalty";
 import NewsDetails from "./pages/Branches/Branch_6_october/component/News/NewsDetails";
 import Services_details from "./pages/Branches/Branch_6_october/component/Services/Services_details";
 import ChampionshipsDetails from "./pages/Branches/Branch_6_october/component/Championships/ChampionshipsDetails";
+import LoyaltyDetails from "./pages/Branches/Branch_6_october/component/Loyalty/LoyaltyDetails";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
               { index: true, element: <October_Home /> },
               { path: "News", element: <News /> },
               { path: "Loyalty", element: <Loyalty /> },
+              { path: "LoyaltyDetails/:id", element: <LoyaltyDetails /> },
               { path: "Championships", element: <Championships /> },
               {path: "Championships/:id", element: <ChampionshipsDetails/> },
               { path: "News/:id", element: <NewsDetails /> },
