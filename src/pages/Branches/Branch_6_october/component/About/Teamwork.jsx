@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
 import DOMPurify from "dompurify";
-
 import { useTranslation } from "react-i18next";
 import { teamwork_content } from '../../axiosConfig/APIs/Teamwork/teamwork_content';
 import { mainUrl } from './../../axiosConfig/Instance';

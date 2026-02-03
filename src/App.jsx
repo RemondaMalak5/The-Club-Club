@@ -12,6 +12,16 @@ import NewsDetails from "./pages/Branches/Branch_6_october/component/News/NewsDe
 import Services_details from "./pages/Branches/Branch_6_october/component/Services/Services_details";
 import ChampionshipsDetails from "./pages/Branches/Branch_6_october/component/Championships/ChampionshipsDetails";
 import LoyaltyDetails from "./pages/Branches/Branch_6_october/component/Loyalty/LoyaltyDetails";
+import Sheraton_Home from "./pages/Branches/Branch_Sheraton/Pages/Sheraton_Home";
+import About from "./pages/Branches/Branch_6_october/pages/About";
+import About_the_club from "./pages/Branches/Branch_6_october/component/About/About_the_club";
+import Board_ChairmanWord from "./pages/Branches/Branch_6_october/component/About/Board_ChairmanWord.JSX";
+import Boardmember from "./pages/Branches/Branch_6_october/component/About/Boardmember";
+import Strategic_Plans from "./pages/Branches/Branch_6_october/component/About/Strategic_Plans";
+import Teamwork from "./pages/Branches/Branch_6_october/component/About/Teamwork";
+import Contactus from "./pages/Branches/Branch_6_october/component/About/Contactus";
+import Minister_welcom from "./pages/Branches/Branch_6_october/component/About/Minister_welcom";
+
 
 const router = createBrowserRouter([
   {
@@ -34,16 +44,37 @@ const router = createBrowserRouter([
               { path: "Loyalty", element: <Loyalty /> },
               { path: "LoyaltyDetails/:id", element: <LoyaltyDetails /> },
               { path: "Championships", element: <Championships /> },
-              {path: "Championships/:id", element: <ChampionshipsDetails/> },
+              { path: "Championships/:id", element: <ChampionshipsDetails /> },
               { path: "News/:id", element: <NewsDetails /> },
-              { path: "Services", element: <Services />},
-              {path: "Services/services_details", element: <Services_details />}
+              { path: "Services", element: <Services /> },
+              { path: "Services/services_details", element: <Services_details /> },
+              {
+                path: "About",
+                element: <About/>,   
+                children: [
+                  { path: "about-the-club", element: <About_the_club/> },
+                  { path: "boardchairmanword", element: <Board_ChairmanWord/> },
+                  { path: "board-member", element: <Boardmember/> },
+                  { path: "strategic-plans", element: <Strategic_Plans/> },
+                  { path: "teamwork", element: <Teamwork/> },
+                  {path:"contact-us", element: <Contactus/>},
+                  {path:"minister-welcome", element: <Minister_welcom/>},
+
+                ]
+              },
+            ],
+          },
+          {
+            path: "Capital",
+            children: [
+              { index: true, element: <New_Capital_Home /> },
+              { path: "News", element: <News /> },
             ],
           },
           {
             path: "Sheraton",
             children: [
-              { index: true, element: <New_Capital_Home /> },
+              { index: true, element: <Sheraton_Home /> },
               { path: "News", element: <News /> },
             ],
           },

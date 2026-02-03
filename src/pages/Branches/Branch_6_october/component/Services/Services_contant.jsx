@@ -89,7 +89,7 @@
 // }
 
 // export default Services_contant
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 import assets from '../../../../../assets/assets';
@@ -134,7 +134,12 @@ const Services_contant = () => {
     indexOfFirstItem,
     indexOfLastItem
   );
-
+   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [])
   return (
     <section dir={i18next.language === "ar" ? "rtl" : "ltr"}>
       <img

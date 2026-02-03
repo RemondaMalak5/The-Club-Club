@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import assets from "./../../assets/assets";
 import { useTranslation } from "react-i18next";
 import { mainUrl } from "./../../axiosConfig/Instance";
 import DOMPurify from "dompurify";
 import { minister_welcome_content } from "../../axiosConfig/APIs/Minister/minister_welcome_content";
 import i18next from "i18next";
+import assets from "../../../../../assets/assets";
 
-const Ministerwelcom = () => {
+const Minister_welcom = () => {
   const {  t } = useTranslation();
   const [data, setData] = useState([]);
 
@@ -62,4 +62,4 @@ const Ministerwelcom = () => {
   );
 };
 
-export default Ministerwelcom;
+export default Minister_welcom;

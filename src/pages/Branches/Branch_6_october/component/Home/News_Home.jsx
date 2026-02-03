@@ -62,7 +62,7 @@ const News_Home = () => {
                 ))}
             </div>
                <div className="flex justify-center items-center py-3">
-   <button onClick={()=>navigate("/Newssection")}
+   <button onClick={()=>navigate("/branches/6-october/News")}
                  className=" px-5 py-1 text-lg flex  text-[#21857C] hover:bg-[#21857C] hover:text-white rounded-lg border-2 border-[#21857C]" > {t("see_more")}
                     {i18next.language !== "ar" ? (
 

@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import assets from './../../assets/assets';
-
 import { useTranslation } from "react-i18next";
-import { mainUrl } from './../../axiosConfig/Instance';
 import  DOMPurify  from 'dompurify';
-import Error_Template from '../../components/Shared_Components/Error_Template';
 import { strategic_plans_content } from '../../axiosConfig/APIs/strategy_plan/strategic_plans_content';
 import i18next from 'i18next';
+import assets from '../../../../../assets/assets';
+import Error_Template from '../../../../../components/Shared_Componant/Error_Template';
 
-const StrategicPlans = () => {
-
-
+const Strategic_Plans = () => {
   const { t} = useTranslation();
   const [data, setData] = useState(null);
   const [error , setError]=useState(false);
@@ -76,4 +72,4 @@ const StrategicPlans = () => {
   )
 }
 
-export default StrategicPlans
+export default Strategic_Plans

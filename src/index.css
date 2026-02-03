@@ -10,5 +10,23 @@
   width: 100%;
 }
 
+ .icon_StrategicPlans{
 
- 
+ width: 23%;
+  border: 20px solid rgba(77, 134, 124, .7);
+  transform: translateY(50px);
+}
+
+.StrategicPlans{
+  background-image: url(assets/our_club_bg_1.png);
+  background-size: cover;
+  height: 400px;
+}
+
+.StrategicPlans h2{
+
+ color: #ffffff;
+ font-size: 36px;
+ font-weight: 700;
+  transform: translateY(-50px);
+}

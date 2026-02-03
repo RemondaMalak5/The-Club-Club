@@ -1,13 +1,15 @@
+
+
 import React, { useEffect, useState } from 'react'
-import assets from './../../assets/assets';
 import { useTranslation } from "react-i18next";
-// import { mainUrl } from './../../axiosConfig/Instance';
 import DOMPurify from "dompurify";
 
-import { board_chairman } from './../../axiosConfig/APIs/Board_ Chairman/Board_ Chairman';
 import i18next from 'i18next';
+import assets from '../../../../../assets/assets';
+import { board_chairman } from '../../axiosConfig/APIs/Board_ Chairman/Board_ Chairman';
+import Error_Template from '../../../../../components/Shared_Componant/Error_Template';
 
-const Board = () => {
+const Board_ChairmanWord = () => {
 
    const { t} = useTranslation();
       const [data, setData] = useState([]);
@@ -76,4 +78,4 @@ const Board = () => {
   )
 }
 
-export default Board
+export default Board_ChairmanWord

@@ -222,8 +222,8 @@ const currentBranch = location.pathname.split("/")[2] || "";
 
   return (
     <section dir={i18next.language === "ar" ? "rtl" : "ltr"}>
-      <div className="fixed  top-0 w-full z-10">
-        <div className="upper_nav flex flex-wrap text-white px-4 lg:px-20  bg-gray-900 items-center sm:justify-between justify-center gap-y-2">
+      <div className="fixed  top-0 w-full z-50">
+        <div className=" flex flex-wrap text-white px-4 lg:px-20  bg-gray-900 items-center sm:justify-between justify-center gap-y-2">
           <div className="flex gap-4 md:gap-8 text-[12px]">
             <div className="flex items-center gap-1">
               <MdLocalPhone /> <span>16647</span>
@@ -303,43 +303,43 @@ const currentBranch = location.pathname.split("/")[2] || "";
                     ref={aboutRef}
                   >
                     <Link
-                      to="about/aboutTheClub"
+                      to={`/branches/${currentBranch}/About/about-the-club`}
                       className="block px-4 py-2 hover:bg-gray-100 hover:text-[#56c6cc]"
                     >
                       {t("About_The_Club")}
                     </Link>
                     <Link
-                      to="about/ministerWelcome"
+                     to={`/branches/${currentBranch}/About/minister-welcome`}
                       className="block px-4 py-2 hover:bg-gray-100 hover:text-[#56c6cc]"
                     >
                       {t("Minister_Welcome")}
                     </Link>
                     <Link
-                      to="about/boardChairmanWord"
+                      to={`/branches/${currentBranch}/About/boardchairmanword`}
                       className="block px-4 py-2 hover:bg-gray-100 hover:text-[#56c6cc]"
                     >
                       {t("Board_Chairman_Word")}
                     </Link>
                     <Link
-                      to="about/boardMember"
+                      to={`/branches/${currentBranch}/About/board-member`}
                       className="block px-4 py-2 hover:bg-gray-100 hover:text-[#56c6cc]"
                     >
                       {t("Board_Members")}
                     </Link>
                     <Link
-                      to="about/StrategicPlans"
+                     to={`/branches/${currentBranch}/About/strategic-plans`}
                       className="block px-4 py-2 hover:bg-gray-100 hover:text-[#56c6cc]"
                     >
                       {t("Strategic_Plans")}
                     </Link>
                     <Link
-                      to="about/teamwork"
+                      to={`/branches/${currentBranch}/About/teamwork`}
                       className="block px-4 py-2 hover:bg-gray-100 hover:text-[#56c6cc]"
                     >
                       {t("Teamwork")}
                     </Link>
                     <Link
-                      to="about/contactus"
+                      to={`/branches/${currentBranch}/About/contact-us`}
                       className="block px-4 py-2 hover:bg-gray-100 hover:text-[#56c6cc]"
                     >
                       {t("Contact_Us")}
@@ -382,44 +382,9 @@ const currentBranch = location.pathname.split("/")[2] || "";
               >
                 {t("Championships")}
               </NavLink>
-
-              {/* <div className="relative">
-                <button
-                  onClick={() => setIsOpenSports(!isOpenSports)}
-                  className={`flex items-center gap-1 transition-colors ${isSportsActive
-                    ? "text-[#56c6cc] font-bold"
-                    : "hover:text-[#56c6cc] text-gray-700"
-                    }`}
-                >
-                  {t("Sports & Activities")} <MdOutlineArrowDropDown />
-                </button>
-                {isOpenSports && (
-                  <div
-                    className="absolute top-full mt-2 w-56 bg-white border rounded shadow-lg z-20 "
-                    onClick={() => {
-                      setIsOpenSports(false);
-                    }}
-                    ref={sportsRef}
-                  >
-                    {sportsItems.map((item, idx) => (
-                      <Link
-                        key={idx}
-                        to={item.path}
-                        className="block px-4 py-2 hover:bg-gray-100 hover:text-[#56c6cc]"
-                      >
-                        {item.title}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div> */}
-
-              {/* <Link to="/booking" className="hover:text-[#56c6cc]">
-                {t("Booking")}
-              </Link> */}
             </div>
 
-            {authenticated ? <div className="flex gap-2   w-[400px] ps-0 ms-0">
+            {/* {authenticated ? <div className="flex gap-2   w-[400px] ps-0 ms-0">
               <button
                 onClick={() => { handle_logout() }}
                 className="bg-gray-200 hover:bg-gray-300 duration-300 text-black px-4 py-1  rounded-[8px] "
@@ -441,75 +406,18 @@ const currentBranch = location.pathname.split("/")[2] || "";
                   >
                     {t("Login")}
                   </button>
-                  {isOpen_t && (
-                    <div className="modal-overlay ">
-                      <div className="modal-content p-10" ref={modalRef}>
-                        <div >
-                          <Close_Form setIsOpen={setIsOpen_t} />
-                        </div>
-                        <h2 className="text-center">{t("Login")}</h2>
-                        <form onSubmit={(e) => { User_login_Api(e) }}>
-                          <input
-                            onChange={(e) => { setEmail(e.target.value), setErrorMail("") }}
-                            value={email}
-                            placeholder={t("Email")}
-                            className="w-full my-4 rounded-full border px-4 py-2"
-                          />
-                          <p className="text-red-600">{errorMail}</p>
-
-                          <div className="relative">
-                            <input
-                              type={`${showPassword ? "text" : "password"}`}
-                              placeholder={t("password")}
-                              value={pass}
-                              onChange={(e) => { setpass(e.target.value), setErrorPass("") }}
-                              className=" w-full outline_color my-4 rounded-full border px-4 py-2 "
-                            />
-                            <p className="text-red-600">{errorPass}</p>
-                            <div className={`absolute top-7 ${isArabic ? "left-3" : "right-3"} cursor-pointer`}>
-                              {showPassword ? (
-                                <IoEye onClick={() => setShowPassword(false)} />
-                              ) : (
-                                <IoEyeOff onClick={() => setShowPassword(true)} />
-                              )}
-                            </div>
-
-                          </div>
-
-                          <button
-                            type="submit"
-                            className="login-btn w-full flex items-center justify-center py-3 bg-[#014e52] text-white rounded-full"
-                          >
-                            <span>
-                              {loader ? (
-                                <LoaderSpinner/>
-                              ) : (
-                                t("Login")
-                              )}
-                            </span>
-                          </button>
-                          {error &&
-                            <p className="text-red-500 my-1">
-                              {error}
-                            </p>}
-                        </form>
-                      </div>
-                    </div>
-                  )}
+                 
                 </div>
 
-                <div ref={dropdownRef_r}>
-
+                <div >
                   <button
-                    onClick={register}
                     className=" text-[#035657] px-4 py-1 rounded-[8px] w-32 border-2 border-[#035657] hover:bg-gradient-to-l from-[#0ba9ac9a] to-[#035657] hover:text-white "
                   >
                     {t("Register")}
                   </button>
-                  {/* <Main_Register isOpen_r={isOpen_r} setIsOpen_r={setIsOpen_r} setIsOpen_t={setIsOpen_t} /> */}
                 </div>
               </div>
-            }
+            } */}
           </div>
         </nav>
       </div>

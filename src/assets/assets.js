@@ -12,9 +12,11 @@ import services_3 from './services_3.jpg' ;
 import news from './news.jpg' ;
 import basketball from './basketball.png' ;
 import video_section from './video_section.png' ;
+import terms_card from './terms_card.png' ;
+import  our_club_bg_1 from './our_club_bg_1.png' ;
 const assets = {
   landingpage_1,landingpage_2,landingpage_3,theClub_Logo,
   branch_6_october,branch_el3asma,branch_sheraton,champs_header_english, 
-  services_1,services_2,services_3,news,basketball,video_section
+  services_1,services_2,services_3,news,basketball,video_section,terms_card, our_club_bg_1
 }
 export default assets;
