@@ -20,8 +20,13 @@ const Hero = () => {
     }
   }
   useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     SliderAPI();
-  }, []);
+    }, [i18next.language]);
+ 
 
   return (
     <div className="max-w-full mx-auto   langingpage" dir={i18next.language === 'ar' ? 'rtl' : 'ltr'}
