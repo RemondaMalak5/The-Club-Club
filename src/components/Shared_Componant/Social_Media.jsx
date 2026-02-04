@@ -23,9 +23,9 @@ const Social_Media = () => {
     ];
 
     return (
-        <ul className="flex items-center gap-1">
+        <ul className="flex items-center gap-3">
             {social_Arr.map((item, index) => (
-                <li key={index} className="relative group">
+                <li key={index} className="relative group border-2 rounded-full border-black">
                     <Link
                         to={item.linkTo}
                         target="_blank"

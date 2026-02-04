@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import i18next from 'i18next';
 import Services_booking from './Services_booking';
@@ -9,6 +9,12 @@ import { useTranslation } from 'react-i18next';
 
 const Services_details = () => {
   const {  } = useTranslation();
+    useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, []);
   return (
     <div className='px-10'>
       <Link to="/branches/6-october/Services" className=' flex gap-2 pb-2 text-[#035657]'>

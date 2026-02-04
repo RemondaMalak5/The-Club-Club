@@ -21,6 +21,8 @@ import Strategic_Plans from "./pages/Branches/Branch_6_october/component/About/S
 import Teamwork from "./pages/Branches/Branch_6_october/component/About/Teamwork";
 import Contactus from "./pages/Branches/Branch_6_october/component/About/Contactus";
 import Minister_welcom from "./pages/Branches/Branch_6_october/component/About/Minister_welcom";
+import Login from "./pages/Auth/login/Login";
+import Register from "./pages/Auth/Register/Register";
 
 
 const router = createBrowserRouter([
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
     element: <Landing_page />,
   },
 
+   {
+    path: "/login",
+    element: <Login/>,
+  },
+  {
+    path: "/register",
+    element: <Register/>,
+  },
   {
     path: "branches",
     element: <Main_Layout />,

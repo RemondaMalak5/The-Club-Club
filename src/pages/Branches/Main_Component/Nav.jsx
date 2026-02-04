@@ -222,7 +222,7 @@ const currentBranch = location.pathname.split("/")[2] || "";
 
   return (
     <section dir={i18next.language === "ar" ? "rtl" : "ltr"}>
-      <div className="fixed  top-0 w-full z-50">
+      <div className="fixed  top-0 w-full z-50 ">
         <div className=" flex flex-wrap text-white px-4 lg:px-20  bg-gray-900 items-center sm:justify-between justify-center gap-y-2">
           <div className="flex gap-4 md:gap-8 text-[12px]">
             <div className="flex items-center gap-1">
