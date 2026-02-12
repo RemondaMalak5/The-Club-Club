@@ -5,7 +5,7 @@ import Why_chooes from '../../components/landing_page/Why_chooes'
 import Our_Branch from '../../components/landing_page/Our_Branch'
 import Gallary from '../../components/landing_page/Gallary'
 import Locations from '../../components/landing_page/Locations'
-// import Our_Club from '../../components/landing_page/Our_Club'
+import Our_Club from '../../components/landing_page/Our_Club'
 
 const Landing_page = () => {
   return (
@@ -14,10 +14,10 @@ const Landing_page = () => {
       <section id="home" className=" scroll-mt-0">
         <Hero />
       </section>
-{/* 
-        <section id="why" className=" scroll-mt-0">
-        <Our_Club/>
-      </section> */}
+
+        <section id="our_club" className=" scroll-mt-0">
+          <Our_Club/>
+        </section>
 
       <section id="why" className=" scroll-mt-0">
         <Why_chooes />

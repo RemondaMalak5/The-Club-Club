@@ -1,5 +1,4 @@
 
-
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { FaPhoneAlt } from "react-icons/fa";
@@ -10,74 +9,103 @@ import { siteContactInfo } from '../../axiosConfig/APIs/ContactUs/site_contact_i
 import i18next from 'i18next';
 import assets from '../../../../../assets/assets';
 
+
 const Contactus = () => {
-      const { t} = useTranslation();
-   const [data,setData]=useState();
-   const Get_contactUs =async ()=>{
-    const params ={
-                  "lang": i18next.language,
+  const { t } = useTranslation();
+  const [data, setData] = useState();
+  const Get_contactUs = async () => {
+    const params = {
+      "lang": i18next.language,
     }
-    try{
+    try {
       const response = await siteContactInfo(params);
-        console.log(response);
-       setData(response.message)
+      console.log(response);
+      setData(response.message)
     }
-    catch (error){
-        console.log("error",error);
-        
+    catch (error) {
+      console.log("error", error);
+
     }
-   }
-   useEffect(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      })
-      Get_contactUs();
-    }, [i18next.language])
-    
+  }
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+    Get_contactUs();
+  }, [i18next.language])
+
 
   return (
-
-    <section    >
-     
- <div className='w-full h-[150px]  flex  relative bg-[#014e52] '>
-          <div className='w-1/3 h-full flex items-center '>
-            <h1 className='text-3xl text-white whitespace-nowrap md:ps-20 ps-5'>{t("Contact_Us")}</h1>
-          </div>
-          <img src={assets.our_club_bg_2}
-          className='cover_2 w-2/3 ' alt="our_club_bg_2"
-            style={{
-              clipPath: i18next.language === "en" ?
-              "polygon(18% 0, 100% 0, 100% 100%, 0% 100%)" :
-              "polygon(0 1%, 83% 0, 100% 100%, 0% 100%)"
-            }}
-          />
-        </div>
-      <div className='flex flex-wrap py-5'>
-        
-         <form className='w-full md:w-1/2 md:mx-24 mx-5  '>
-          <div className='grid grid-cols-2 py-4 gap-3 '>
-            <input placeholder={t("Name")} className='border-2 border-cyan-700 p-3 rounded-md'></input>
-            <input placeholder={t("Email")} className='border-2 border-cyan-700 rounded-md p-3'></input>
-            <input placeholder={t("Phone")} className='border-2 border-cyan-700 p-3 rounded-md'></input>
-            <input placeholder={t("subject")} className='border-2 border-cyan-700 rounded-md p-3'></input>
-          </div>
-          <textarea type="message" placeholder={t("Message")} className='border-2 border-cyan-700 w-full p-4'></textarea>
-          <button type="submit" className='border-2 border-cyan-700 w-52 p-3 rounded-3xl text-center my-3 md:mx-32 mx-40 btn_contactus linear-gradient(to right, #1a9785, #065b5b);'>{t("submit")}</button>
-        </form>   
-        
-       
-            <div  className='  md:w-1/4 w-full mx-5   '> 
-              <div className='flex flex-col justify-center align-middle text-center bg-[#014e52] p-10 text-white rounded-3xl'>
-                 <p className='flex'><span><IoMdMail className='text-xl m-1' /></span > {data?.email}</p>
-                 <p className='flex'><span><IoLocation className='text-xl m-1' /></span>{data?.location}</p> 
-                 <p className='flex'><span><FaPhoneAlt className='text-lg m-1'/></span>{data?.phone}</p>
-                 
-              </div>
+    <section >
+       <div className='w-full h-96 '>
+              <img src={assets.contactus} className='w-full h-full object-cover brightness-50' />
               
-                 
+              <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+                {t("Contact Us")}
+              </h2>
+              <p
+             className='text-md md:text-l lg:text-xl text-center  text-white absolute top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+                {t("Stay informed with the latest news, achievements, and announcements from our club")}</p>
             </div>
+
+     
+       <div className="bg-[#E9F0F0] py-10 px-6 md:px-10 m-5">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10">
+        {/* Left side: Text + Contact Info */}
+        <div className="md:w-1/2 flex flex-col gap-6 text-[#4B4B4B]">
+          <h2 className="text-4xl font-semibold">
+            <span className="text-[#00786F] font-bold">Get</span> in touch with us anytime
+          </h2>
+          <p className="text-gray-700">
+            Have a question or need support? Get in touch with us anytime we’re here to help and would love to hear from you.
+          </p>
+
+          <div className="flex flex-col gap-3 text-gray-700">
+            <div className="flex items-center gap-3">
+              <IoMdMail className="text-[#00786F] text-xl" />
+              <span>info@theclub.com.eg</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <FaPhoneAlt className="text-[#00786F] text-xl" />
+              <span>16647</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <IoLocation className="text-[#00786F] text-xl" />
+              <span>Al Hay Al Motamayez, 6 October, Giza</span>
+            </div>
+          </div>
+
+          {/* Social Icons */}
+          <div className="flex gap-3 mt-4">
+            <div className="w-8 h-8 rounded-full border border-[#00786F] flex items-center justify-center text-[#00786F] cursor-pointer">F</div>
+            <div className="w-8 h-8 rounded-full border border-[#00786F] flex items-center justify-center text-[#00786F] cursor-pointer">G</div>
+            <div className="w-8 h-8 rounded-full border border-[#00786F] flex items-center justify-center text-[#00786F] cursor-pointer">X</div>
+          </div>
         </div>
+
+        {/* Right side: Form */}
+        <div className="md:w-1/2 bg-white rounded-2xl shadow-lg p-8 ">
+          <form className="flex flex-col gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input type="text" placeholder={t("Name")} className="border border-gray-300 rounded-md p-3 w-full bg-[#E9F0F0]" />
+              <input type="text" placeholder={t("Phone")} className="border border-gray-300 rounded-md p-3 w-full bg-[#E9F0F0]" />
+              <input type="email" placeholder={t("Email")} className="border border-gray-300 rounded-md p-3 w-full bg-[#E9F0F0]" />
+              <select className="border border-gray-300 rounded-md p-3 w-full bg-[#E9F0F0]">
+                <option>Branch</option>
+                <option>6 October</option>
+                <option>New Cairo</option>
+              </select>
+            </div>
+            <textarea placeholder={t("Write your message")} className="border border-gray-300 rounded-md p-3 w-full h-40 bg-[#E9F0F0]"></textarea>
+            <button type="submit" className="bg-[#00786F] text-white p-3 rounded-lg mt-2 hover:bg-[#065b5b] transition">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
     </section>
   );
 };

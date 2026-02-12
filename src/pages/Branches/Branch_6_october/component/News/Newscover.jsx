@@ -8,7 +8,7 @@ const Newscover = () => {
     const { t } = useTranslation();
   
   return (
-    <div className=''>
+    <div >
       <div className='w-full h-96 '>
         <img src={assets.news} className='w-full h-full object-cover brightness-50' />
         
@@ -16,7 +16,7 @@ const Newscover = () => {
           {t("Our News & Updates")}
         </h2>
         <p
-       className='text-md md:text-l lg:text-xl   text-white absolute top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+       className='text-md md:text-l lg:text-xl  text-center  text-white absolute top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
           {t("Stay informed with the latest news, achievements, and announcements from our club")}</p>
       </div>
     </div>

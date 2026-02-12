@@ -74,7 +74,7 @@ const currentItems = data?.slice(indexOfFirstItem, indexOfLastItem) || [];
 
                     <h5 className="text-lg font-bold mb-2 text-black">{e.title} </h5>
                     <div dangerouslySetInnerHTML={{ __html: e.small_description }} className=" line-clamp-1" />
-                    <div className="flex justify-between text-[#21857C] text-lg ">
+                    <div className="flex justify-between text-[#21857C] text-lg flex-wrap ">
                       <p className='flex items-center '> <span className="p-1"><HiMiniCalendarDateRange /></span> {e.date}</p>
                       <Btn_1  title={t("Read_more")} />
                     </div>

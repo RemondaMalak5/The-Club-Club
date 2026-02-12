@@ -5,7 +5,7 @@ import DOMPurify from "dompurify";
 import { FaBullseye, FaChartArea, FaLocationDot } from 'react-icons/fa6';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import Title_2 from '../Shared_Componant/Title_2';
-import  About_API  from '../../axiosConfig/API/landing_page/About';
+import { About_API } from '../../axiosConfig/APIs_Landing/About';
 
 const Our_Club = () => {
   const { t } = useTranslation();
@@ -43,7 +43,7 @@ const cleanDescription = DOMPurify.sanitize(data?.[0]?.description || "", {
   ];
 
   return (
-    <section className="px-24 py-5" dir={i18next.language !== "ar" ? "ltr" : "rtl"}>
+    <section className="px-24 py-5" dir={i18next.language !== "ar" ? "ltr" : "rtl"} >
       <Title_2 title={t("our_club")} />
 
       <div className="flex flex-col gap-4 px-28">

@@ -88,7 +88,7 @@ const Navbar = () => {
 
   const listNav = [
     { name: t("Home"), id: "home" },
-    { name: t("About"), id: "about" },
+    { name: t("About"), id: "our_club" },
     { name: t("Branches"), id: "branches" },
     { name: t("Why us?"), id: "why" },
     { name: t("Booking"), id: "booking" },
