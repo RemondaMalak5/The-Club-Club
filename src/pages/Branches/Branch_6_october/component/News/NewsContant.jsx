@@ -10,6 +10,7 @@ import { HiMiniCalendarDateRange } from 'react-icons/hi2';
 import PaginationComponent from '../../../../../components/Shared_Componant/PaginationComponent';
 import Error_Template from '../../../../../components/Shared_Componant/Error_Template';
 import Btn_1 from '../../../../../components/Shared_Componant/Btn_1';
+import Title_1 from '../../../../../components/Shared_Componant/Title_1';
 
 const NewsContant = () => {
   const { t } = useTranslation();
@@ -54,8 +55,8 @@ const NewsContant = () => {
   return (
     <section dir={i18next.language === "ar" ? "rtl" : "ltr"}>
       <div className='w-full md:px-28 p-10'>
-        <h2 className='text-3xl my-3 text-center font-semibold'> {t("last_News")} </h2>
-
+        {/* <h2 className='text-3xl my-3 text-center font-semibold'> {t("last_News")} </h2> */}
+             <Title_1 title={t("last_News")}/>
         <div className='flex flex-wrap w-full'>
           {data ? <>
              {data?.map((e, index) => (

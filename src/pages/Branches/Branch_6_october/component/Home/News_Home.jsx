@@ -8,6 +8,8 @@ import { HiMiniArrowTrendingUp, HiMiniCalendarDateRange } from "react-icons/hi2"
 import Btn_1 from "../../../../../components/Shared_Componant/Btn_1";
 import Title_1 from "../../../../../components/Shared_Componant/Title_1";
 import { mainUrl } from "../../axiosConfig/Instance";
+import Title_2 from "../../../../../components/Shared_Componant/Title_2";
+import Title_3 from "../../../../../components/Shared_Componant/Title_3";
 
 
 const News_Home = () => {

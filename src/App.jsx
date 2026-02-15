@@ -23,6 +23,7 @@ import Contactus from "./pages/Branches/Branch_6_october/component/About/Contact
 import Minister_welcom from "./pages/Branches/Branch_6_october/component/About/Minister_welcom";
 import Login from "./pages/Auth/login/Login";
 import Register from "./pages/Auth/Register/Register";
+import ProtectedRoute from "./components/Auth/ProtectedRoute";
 
 
 const router = createBrowserRouter([
@@ -41,10 +42,13 @@ const router = createBrowserRouter([
   },
   {
     path: "branches",
-    element: <Main_Layout />,
-    children: [
-      {
-        element: <BranchLayout />,
+    element:  (
+    <ProtectedRoute>
+      <Main_Layout />
+    </ProtectedRoute>),
+    // children: [
+    //   {
+        // element: <BranchLayout />,
         children: [
           {
             path: "6-october",
@@ -89,8 +93,8 @@ const router = createBrowserRouter([
             ],
           },
         ],
-      },
-    ],
+      // },
+    // ],
   }
 
 ]);
