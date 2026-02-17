@@ -61,7 +61,7 @@ const Footer = () => {
         <Line/>
         <div className="flex justify-between gap-1 flex-wrap items-center text-center text-[#fff] mt-2">
           <p>powered by <Link to="https://datasofteg.com/">DataSoft</Link></p>
-          <p>© Copyright 2025 </p>
+          <p>© Copyright 2026 </p>
         </div>
       </div>
     </section>

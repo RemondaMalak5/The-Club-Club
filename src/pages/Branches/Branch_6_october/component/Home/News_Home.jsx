@@ -39,7 +39,7 @@ const News_Home = () => {
   }, [i18next.language]);
   return (
   <section className=" bg-[#E9F0F0] py-6 ">
-              <Title_1 title={t("New")}/>
+              <Title_1 title={t("News")}/>
         <p className=" text-gray-600 text-center text-2xl">Stay informed with the latest news, achievements, and announcements from our club</p>
          <div className='flex flex-wrap py-5 w-full px-9'>
                 {data?.map((e, index) => (

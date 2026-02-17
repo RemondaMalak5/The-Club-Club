@@ -16,7 +16,7 @@ const  Services_home = () => {
     ]
     return (
         <div className='bg-[#E9F0F0] px-10 py-10'>
-            <Title_1 title={"Our Services"} />
+            <Title_1 title={t("Our Services")} />
             <p className='text-gray-600 text-center text-2xl'>Discover our comprehensive range of sports and fitness services designed to help you excel.</p>
             <div className='flex flex-wrap py-5 w-full '>
                 {arr.map((e, index) => (

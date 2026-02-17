@@ -32,8 +32,8 @@ const Video_home = () => {
       className="video flex flex-col items-center justify-center gap-6 py-6"
       dir={i18next.language === "ar" ? "rtl" : "ltr"}
     >
-      <Title_1 title={"  Take a Glimpse Inside The Club!"}/>
-            <p className='text-gray-600 text-center text-2xl'>Get a quick look at our world-class facilities and sports community.</p>
+      <Title_1 title={t("Take a Glimpse Inside The Club!")}/>
+            <p className='text-gray-600 text-center text-2xl'>{t("Get a quick look at our world-class facilities and sports community.")} </p>
       {data?.video ? (
         <video
           src={`${mainUrl}${data.video}`}

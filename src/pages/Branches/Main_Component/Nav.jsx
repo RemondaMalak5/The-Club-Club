@@ -221,8 +221,8 @@ const currentBranch = location.pathname.split("/")[2] || "";
   }, [isOpen_t])
 
   return (
-    <section dir={i18next.language === "ar" ? "rtl" : "ltr"}>
-      <div className="fixed  top-0 w-full z-50 ">
+    <section  dir={i18next.language === "ar" ? "rtl" : "ltr"}>
+      <div className="fixed  top-0 w-full z-50  ">
         <div className=" flex flex-wrap text-white px-4 lg:px-20  bg-gray-900 items-center sm:justify-between justify-center gap-y-2">
           <div className="flex gap-4 md:gap-8 text-[12px]">
             <div className="flex items-center gap-1">
@@ -238,7 +238,7 @@ const currentBranch = location.pathname.split("/")[2] || "";
 
           <div className="flex items-center gap-2">
             <Social_Media />
-            <div className="relative flex gap-2 ms-4 overflow-hidden rounded-full transition-all duration-300 ease-in-out group hover:text-black">
+            <div className="relative flex gap-2 ms-4 overflow-hidden rounded-xl transition-all duration-300 ease-in-out group hover:text-black">
               <div className="absolute bottom-0 left-0 w-full h-0 bg-white z-0 transition-all duration-300 ease-in-out group-hover:h-full"></div>
               <div className="relative z-10 flex gap-2">
                 {i18next.language === "ar" && (

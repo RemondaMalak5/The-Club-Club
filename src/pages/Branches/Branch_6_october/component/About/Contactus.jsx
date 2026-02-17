@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next';
 import { siteContactInfo } from '../../axiosConfig/APIs/ContactUs/site_contact_info';
 import i18next from 'i18next';
 import assets from '../../../../../assets/assets';
+import Social_Media from '../../../../../components/Shared_Componant/Social_Media';
 
 
 const Contactus = () => {
@@ -48,8 +49,6 @@ const Contactus = () => {
              className='text-md md:text-l lg:text-xl text-center  text-white absolute top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                 {t("Stay informed with the latest news, achievements, and announcements from our club")}</p>
             </div>
-
-     
        <div className="bg-[#E9F0F0] py-10 px-6 md:px-10 m-5">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10">
         {/* Left side: Text + Contact Info */}
@@ -76,12 +75,8 @@ const Contactus = () => {
             </div>
           </div>
 
-          {/* Social Icons */}
-          <div className="flex gap-3 mt-4">
-            <div className="w-8 h-8 rounded-full border border-[#00786F] flex items-center justify-center text-[#00786F] cursor-pointer">F</div>
-            <div className="w-8 h-8 rounded-full border border-[#00786F] flex items-center justify-center text-[#00786F] cursor-pointer">G</div>
-            <div className="w-8 h-8 rounded-full border border-[#00786F] flex items-center justify-center text-[#00786F] cursor-pointer">X</div>
-          </div>
+          <Social_Media/>
+        
         </div>
 
         {/* Right side: Form */}
