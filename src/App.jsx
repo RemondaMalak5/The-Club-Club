@@ -167,7 +167,7 @@ const router = createBrowserRouter([
           { path: "loyalty/:id", element: <LoyaltyDetails /> },
           { path: "championships", element: <Championships /> },
           { path: "championships/:id", element: <ChampionshipsDetails /> },
-          { path: "profile", element: <Profile/>},
+          {path:"profile", element: <Profile/>},          
           {
             path: "about",
             element: <About />,

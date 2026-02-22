@@ -383,7 +383,7 @@ const currentBranch = location.pathname.split("/")[2] || "";
                 {t("Championships")}
               </NavLink>
             </div>
-            <div onClick={() => navigate(`/branches/profile`)}>
+            <div onClick={() => navigate(`/branches/6-october/profile`)}>
               profile 
             </div>
           </div>
