@@ -14,7 +14,6 @@ import { Link } from 'react-router-dom';
 const LoyaltyContent = () => {
 
   const { t } = useTranslation();
-
   const [data, setData] = useState(null);
   const [error, seterror] = useState(false);
   const offers_content_Api = async () => {
@@ -31,7 +30,6 @@ const LoyaltyContent = () => {
       seterror(true);
     }
   }
-
   const itemsPerPage = 5;
   const [currentPage, setCurrentPage] = useState(1);
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -55,11 +53,10 @@ const currentItems = data?.slice(indexOfFirstItem, indexOfLastItem) || [];
     <section>
       <div className='w-full md:px-28 p-10' >
         <h2 className='text-3xl mb-5 text-[#014e52]'>{t("Title")} </h2>
-
         <div className='flex flex-wrap'>
           {data ? <>
             {data?.map((e, index) => (
-              <Link to={`/branches/6-october/LoyaltyDetails/${e.offers_id}`} className="xl:w-1/3 w-full px-2 py-2" key={index}>
+              <Link to={`/branches/6-october/loyalty/${e.offers_id}`} className="xl:w-1/3 w-full px-2 py-2" key={index}>
                 <div className="bg-white border border-gray-200 rounded-2xl shadow-md overflow-hidden " key={index}>
                   <div className={`absolute  ${i18next.language === "en" ? " rounded-br-xl" : " rounded-bl-xl"
                     } bg-yellow-300 text-sm font-bold text-black px-3 py-1 z-10`}>
@@ -71,7 +68,6 @@ const currentItems = data?.slice(indexOfFirstItem, indexOfLastItem) || [];
                     className="w-full h-60 object-cover"
                   />
                   <div className="p-3">
-
                     <h5 className="text-lg font-bold mb-2 text-black">{e.title} </h5>
                     <div dangerouslySetInnerHTML={{ __html: e.small_description }} className=" line-clamp-1" />
                     <div className="flex justify-between text-[#21857C] text-lg flex-wrap ">

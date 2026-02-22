@@ -9,10 +9,8 @@ import assets from "../../../../../assets/assets";
 
 const LoyaltyDetails = () => {
   const { t } = useTranslation();
-
   const [data, setData] = useState();
   const [error, setError] = useState(false);
-
   const { id } = useParams();
 
   useEffect(() => {
@@ -59,8 +57,6 @@ const LoyaltyDetails = () => {
             }}
           />
         </div>
-   
-
       </div>
 
       <div className='flex flex-wrap ps-10 pt-5'>

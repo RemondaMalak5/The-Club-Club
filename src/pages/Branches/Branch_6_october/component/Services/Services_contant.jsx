@@ -191,9 +191,8 @@ const Services_contant = () => {
                 <p className="text-gray-600 mb-4">{item.description}</p>
 
                 <button
-                  onClick={() => navigate("/branches/6-october/Services/services_details")}
-                  className="px-4 py-2 text-[#21857C] rounded-2xl border border-[#21857C] w-full hover:bg-[#21857C] hover:text-white transition-all duration-300"
-                >
+                  onClick={() => navigate("/branches/6-october/services/details")}
+                  className="px-4 py-2 text-[#21857C] rounded-2xl border border-[#21857C] w-full hover:bg-[#21857C] hover:text-white transition-all duration-300">
                   Learn More
                 </button>
               </div>

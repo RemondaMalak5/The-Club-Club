@@ -383,41 +383,9 @@ const currentBranch = location.pathname.split("/")[2] || "";
                 {t("Championships")}
               </NavLink>
             </div>
-
-            {/* {authenticated ? <div className="flex gap-2   w-[400px] ps-0 ms-0">
-              <button
-                onClick={() => { handle_logout() }}
-                className="bg-gray-200 hover:bg-gray-300 duration-300 text-black px-4 py-1  rounded-[8px] "
-              >
-                {t("logout")}
-              </button>
-              <Link
-                to={"/profile/Information"}
-                className="bg-gray-200 hover:bg-gray-300 duration-300 text-black px-4 py-1 rounded-[8px]"
-              >
-                {t("profile")}
-              </Link>
-            </div> :
-              <div className="flex flex-col gap-1 mt-2 md:mt-0">
-                <div ref={dropdownRef_login}>
-                  <button
-                    onClick={login}
-                    className=" text-white px-4 py-1 w-32 rounded-[8px] whitespace-nowrap border border-[#00000000] bg-gradient-to-r from-[#0ba9ac9a] to-[#035657] hover:from-[#ffff] hover:to-[#ffff] hover:border-[#035657] transition-all duration-500 hover:text-[#035657]"
-                  >
-                    {t("Login")}
-                  </button>
-                 
-                </div>
-
-                <div >
-                  <button
-                    className=" text-[#035657] px-4 py-1 rounded-[8px] w-32 border-2 border-[#035657] hover:bg-gradient-to-l from-[#0ba9ac9a] to-[#035657] hover:text-white "
-                  >
-                    {t("Register")}
-                  </button>
-                </div>
-              </div>
-            } */}
+            <div onClick={() => navigate(`/branches/profile`)}>
+              profile 
+            </div>
           </div>
         </nav>
       </div>
