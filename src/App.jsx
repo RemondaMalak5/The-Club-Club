@@ -130,6 +130,10 @@ import Login from "./pages/Auth/login/Login";
 import Register from "./pages/Auth/Register/Register";
 import ProtectedRoute from "./components/Auth/ProtectedRoute";
 import Profile from "./pages/Users/Profile";
+import News_Capital from "./pages/Branches/Branch_New_Capital/Pages/News_Capital";
+import Services_Capital from "./pages/Branches/Branch_New_Capital/Pages/Services_Capital";
+import Services_details_Capital from "./pages/Branches/Branch_New_Capital/component/Services/Services_details_Capital";
+import NewsDetails_capital from "./pages/Branches/Branch_New_Capital/component/News/NewsDetails_capital";
 
 const router = createBrowserRouter([
   {
@@ -187,8 +191,14 @@ const router = createBrowserRouter([
       {
         path: "capital",
         children: [
-          { index: true, element: <New_Capital_Home /> },
-          { path: "news", element: <News /> },
+          { index: true, element: <New_Capital_Home/> },
+          { path: "news", element: <News_Capital/> },
+           { path: "news/:id", element: <NewsDetails_capital /> },
+           { path: "services", element: <Services_Capital /> },
+            { path: "services/details", element: <Services_details_Capital/> },
+
+
+
         ],
       },
 
@@ -196,7 +206,7 @@ const router = createBrowserRouter([
         path: "sheraton",
         children: [
           { index: true, element: <Sheraton_Home /> },
-          { path: "news", element: <News /> },
+          { path: "news-capital", element: <News_Capital/> },
         ],
       },
     ],

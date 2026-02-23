@@ -1,10 +1,23 @@
 import React from 'react'
+import Hero from '../component/Home/Hero'
+import News_Home from '../component/Home/News_Home'
+import Video_home from '../component/Home/Video_home'
+import Gallary_Home from '../component/Home/Gallary_Home'
+import Activities_Home from '../component/Home/Activities_Home'
+import Services_home from '../component/Home/Services_home'
+import OurClub_home from '../component/Home/OurClub_home'
 
 const New_Capital_Home = () => {
   return ( 
     <div>
-        New Capital
-    </div>
+     <Hero/>
+      <OurClub_home/>
+      <News_Home/>
+       <Video_home/> 
+      <Services_home/> 
+      <Activities_Home/>
+        <Gallary_Home/> 
+           </div>
   )
 }
 
