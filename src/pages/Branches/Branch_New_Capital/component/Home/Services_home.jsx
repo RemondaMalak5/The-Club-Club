@@ -31,7 +31,7 @@ const  Services_home = () => {
                                 <h5 className="text-lg font-semibold mb-2 text-gray-800">{e.title} </h5>
                                 <p className="text-gray-600 mb-4">
                                     {e.description}                            </p>
-                                <button onClick={()=>navigate("/branches/capital/Services/services_details")} className="px-4 py-2  text-[#21857C] rounded-2xl border border-[#21857C] w-full hover:bg-[#21857C] hover:text-white transition-all duration-300">
+                                <button onClick={()=>navigate("services/details")} className="px-4 py-2  text-[#21857C] rounded-2xl border border-[#21857C] w-full hover:bg-[#21857C] hover:text-white transition-all duration-300">
                                     learn more
                                 </button>
                             </div>
