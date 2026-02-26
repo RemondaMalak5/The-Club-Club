@@ -7,7 +7,7 @@ import { MdSportsSoccer } from 'react-icons/md';
 
 const Info_Ecard = () => {
     return (
-        <div className='w-2/3 px-9 '>
+        <div className='w-2/3 px-9  '>
              <div className="max-w-3xl mx-auto p-6">
 
       <div className="bg-teal-50 border-2 border-teal-700 rounded-2xl p-6 shadow-sm">

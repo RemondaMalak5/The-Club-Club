@@ -100,7 +100,7 @@ const Services_contant = () => {
   const [t] = useTranslation();
   const navigate = useNavigate();
   const paginationRef = useRef(null);
-
+const branch = localStorage.getItem("branch");
   // ------------------ Static Data ------------------
   const services = [
     { image: assets.services_1, title: "Yoga & Wellness", description: "Mindful yoga sessions and wellness programs for body and mind balance." },
@@ -142,17 +142,19 @@ const Services_contant = () => {
   }, [])
   return (
     <section dir={i18next.language === "ar" ? "rtl" : "ltr"}>
-      
- <div className='w-full h-96 '>
-        <img src={assets.services_1} className='w-full h-full object-cover brightness-50' />
-        
-        <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-          {t("Our Services")}
-        </h2>
-        <p
-       className='text-md md:text-l lg:text-xl  text-center  text-white absolute top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-          {t("Stay informed with the latest news, achievements, and announcements from our club")}</p>
-      </div>
+     <div className='w-full h-96 relative'>
+  <img src={assets.services_1} className='w-full h-full object-cover brightness-50' />
+  
+  <div className='absolute inset-0 flex flex-col justify-center items-center text-center px-4'>
+    <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white'>
+      {t("Our Services")}
+    </h2>
+    <p className='text-md md:text-lg lg:text-xl text-white mt-4'>
+      {t("Stay informed with the latest news, achievements, and announcements from our club")}
+    </p>
+  </div>
+</div>
+
       {/* ------- Filter Buttons ------- */}
       <div className="flex flex-wrap justify-center items-center py-6 px-10 gap-3">
         {categories.map((cat, index) => (
@@ -191,7 +193,7 @@ const Services_contant = () => {
                 <p className="text-gray-600 mb-4">{item.description}</p>
 
                 <button
-                  onClick={() => navigate("/branches/capital/services/details")}
+                  onClick={() => navigate(`/branches/${branch}/services/details`)}
                   className="px-4 py-2 text-[#21857C] rounded-2xl border border-[#21857C] w-full hover:bg-[#21857C] hover:text-white transition-all duration-300">
                   Learn More
                 </button>

@@ -17,7 +17,7 @@ const Services_details_Capital = () => {
     }, []);
   return (
     <div className='px-10'>
-      <Link to="/branches/capital/Services" className=' flex gap-2 pb-2 text-[#035657]'>
+      <Link to={`/branches/${localStorage.getItem("branch")}/Services`} className=' flex gap-2 pb-2 text-[#035657]'>
         {i18next.language === 'ar' ? <FaArrowRight className='py-1 text-2xl' />
           : <FaArrowLeft className='py-1 text-2xl' />}
         <p >Back to services</p>

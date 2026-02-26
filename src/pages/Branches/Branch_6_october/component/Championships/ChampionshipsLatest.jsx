@@ -40,7 +40,7 @@ const ChampionshipsLatest = () => {
 
     <section>
       <div className='Loyalty  w-full md:px-28 py-16 px-5'>
-        <h2 className='text-5xl mb-10  '>{t("last_championships")}</h2>
+        <h2 className='text-5xl mb-10 text-center'>{t("last_championships")}</h2>
         <div className="  rounded-2xl w-full ">
           {data ?
          <div className=' flex flex-wrap   '>

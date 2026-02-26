@@ -1,12 +1,15 @@
 
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next';
-import { useParams } from 'react-router';
+import { Link, useParams } from 'react-router';
 import { mainUrl } from '../../axiosConfig/Instance';
 import DOMPurify from "dompurify";
 import { Championships_Details } from './../../axiosConfig/APIs/Championships/championshipDetails';
 import i18next from 'i18next';
 import assets from '../../../../../assets/assets';
+import { FaArrowLeft, FaArrowRight, FaEye } from 'react-icons/fa6';
+import { HiMiniCalendarDateRange } from 'react-icons/hi2';
+import { IoTimeOutline } from 'react-icons/io5';
 
 const ChampionshipsDetails = () => {
     const {  t } = useTranslation();
@@ -39,47 +42,28 @@ const ChampionshipsDetails = () => {
 
 
   return (
-    <section >
-      <div >
-        <div className='w-full h-[150px] ps-20 flex  relative bg-[#014e52] '>
-          <div className='w-1/3 h-full flex items-center '>
-            <h1 className='text-3xl text-white whitespace-nowrap '>{t("Championships")}</h1>
-          </div>
-          <img src={assets.our_club_bg_2}
-            className='cover_2 w-2/3 ' alt="our_club_bg_2"
-            style={{
-              clipPath: i18next.language !== "ar" ?
-              "polygon(18% 0, 100% 0, 100% 100%, 0% 100%)" :
-              "polygon(0 1%, 83% 0, 100% 100%, 0% 100%)"
-
-            }}
-          />
+    <section className='px-7'>
+       <Link to="/branches/6-october/Championships" className=' flex gap-2 pb-2 text-[#035657]'>
+        {i18next.language === 'ar' ? <FaArrowRight className='py-1 text-2xl' />
+          : <FaArrowLeft className='py-1 text-2xl' />}
+        <p >Back to Championships</p>
+      </Link>
+        <img src={`${mainUrl}${data?.image}`} className='w-full h-80  rounded-2xl  object-cover' />
+       
+      <div className='p-3'>
+        <p className='font-bold text-2xl pb-5'>{data?.title}</p>
+        <div className='flex flex-wrap gap-6'>
+          <p className='text-[#21857C] flex font-semibold text-xl gap-2 '>  <span className='py-1'><HiMiniCalendarDateRange/></span> {data?.date} </p> 
+                    <p className='text-[#21857C] flex font-semibold text-xl gap-2 '>  <span  className='py-1'><IoTimeOutline/> </span>{data?.time} 8:00 </p> 
+          <p className='text-[#21857C] flex font-semibold text-xl gap-2 '>  <span className='py-1'><FaEye /> </span> {data?.views} 6,200 </p> 
         </div>
+
       </div>
-      <div className='flex flex-wrap ps-10 pt-5'>
-        <div className='w-full md:w-1/2 p-10 max-h-[550px] overflow-y-auto'>
-          <h2 className='text-2xl font-extrabold my-2'>{data?.title}</h2>
-          <div
+     
+<div
             dangerouslySetInnerHTML={{
               __html: DOMPurify.sanitize(data?.description)
-            }} />
-
-        </div>
-        {(() => {
-
-          const styleObj = i18next.language !== "ar"
-            ? { clipPath: "polygon(100% 0,100% 100%,0 100%,22% 71%,0 0)" }
-            : { clipPath: "polygon(0% 0%, 100% 0, 74% 71%, 100% 100%, 0% 100%)" };
-          return (
-            <div className='w-full md:w-1/2 h-[550px]' style={styleObj}>
-              <img src={`${mainUrl}${data?.image}`} className='w-full h-[74%]' />
-              <div className='bg-[#014E52] h-[25%] '>
-                <h2 className='text-center text-white text-xl py-10'>{data?.date}</h2>
-              </div>
-            </div>
-          );
-        })()}
-      </div>
+            }} />    
     </section>
   )
 }

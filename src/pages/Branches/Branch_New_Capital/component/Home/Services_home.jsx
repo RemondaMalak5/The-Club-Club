@@ -8,6 +8,7 @@ import Title_1 from '../../../../../components/Shared_Componant/Title_1';
 
 const  Services_home = () => {
     const [t] = useTranslation();
+    const branch = localStorage.getItem("branch");
     const navigate = useNavigate();
     const arr = [
         { image: assets.services_1, title: "Yoga & Wellness", description: "Mindful yoga sessions and wellness programs for body and mind balance." },
@@ -40,7 +41,7 @@ const  Services_home = () => {
                 ))}
             </div>
             <div className="flex justify-center items-center pt-3">
-                <button onClick={()=>navigate("/branches/capital/services")}
+                <button onClick={()=>navigate(`/branches/${branch}/services`)}
                  className=" px-5 py-1 text-lg flex  text-[#21857C] hover:bg-[#21857C] hover:text-white rounded-lg border-2 border-[#21857C]" > {t("see_more")}
                     {i18next.language !== "ar" ? (
                         <HiMiniArrowTrendingUp className="m-1" />

@@ -18,6 +18,7 @@ const News_Home = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(1);
   const navigate = useNavigate();
+   const branch = localStorage.getItem("branch");
 
    const fetchData = async () => {
       const params = {
@@ -43,7 +44,7 @@ const News_Home = () => {
         <p className=" text-gray-600 text-center text-2xl">Stay informed with the latest news, achievements, and announcements from our club</p>
          <div className='flex flex-wrap py-5 w-full px-9'>
                 {data?.map((e, index) => (
-                    <Link to={`/branches/capital/News/${e.news_id}`} className="xl:w-1/3 md:w-1/2 w-full px-2 " key={index}>
+                    <Link to={`/branches/${branch}/News/${e.news_id}`} className="xl:w-1/3 md:w-1/2 w-full px-2 " key={index}>
                         <div className="bg-white border border-gray-200 rounded-2xl shadow-md overflow-hidden " key={index}>
                             <img
                                 src={`${mainUrl}${e.image}`}
@@ -64,7 +65,7 @@ const News_Home = () => {
                 ))}
             </div>
                <div className="flex justify-center items-center py-3">
-   <button onClick={()=>navigate("/branches/capital/News")}
+   <button onClick={()=>navigate(`/branches/${branch}/News`)}
                  className=" px-5 py-1 text-lg flex  text-[#21857C] hover:bg-[#21857C] hover:text-white rounded-lg border-2 border-[#21857C]" > {t("see_more")}
                     {i18next.language !== "ar" ? (
 

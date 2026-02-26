@@ -13,7 +13,7 @@ const ChampionshipsContent = () => {
           {t("Our Championships")}
         </h2>
         <p
-       className='text-md md:text-l lg:text-xl  text-center  text-white absolute top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+       className='text-md md:text-l lg:text-xl  text-center  text-white absolute xl:top-[60%] top-[5%] left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
           {t("Stay informed with the latest news, achievements, and announcements from our club")}</p>
       </div>
 

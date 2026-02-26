@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react';
-import { get_club_championships } from '../../axiosConfig/APIs/Championships/Championships';
 import { useTranslation } from "react-i18next";
 import { mainUrl } from '../../axiosConfig/Instance';
 import { Link, useParams } from 'react-router';
@@ -9,19 +8,20 @@ import { HiMiniCalendarDateRange } from 'react-icons/hi2';
 import DOMPurify from "dompurify";
 import LoaderSpinner from '../../../../../components/Shared_Componant/LoaderSpinner';
 import Btn_1 from '../../../../../components/Shared_Componant/Btn_1';
+import { get_club_championships } from '../../../Branch_6_october/axiosConfig/APIs/Championships/Championships';
 
 const ChampionshipsLatest = () => {
   const { t } = useTranslation();
   const { champ_id } = useParams();
   const [data, setData] = useState();
-
+  const branch = localStorage.getItem("branch");
   const Championship_Api = async () => {
     const params = {
       "lang": i18next.language,
       "branch": "نادي النادي - 6 اكتوبر"
     }
     try {
-      const response = await get_club_championships(params);
+      const response = await get_club_championships (params);
       console.log("response : ", response)
       setData(response.message);
     } catch (error) {
@@ -45,7 +45,7 @@ const ChampionshipsLatest = () => {
           {data ?
          <div className=' flex flex-wrap   '>
           {data?.map((e, index) => (
-            <Link to={`/events/${e.champ_id}`} className="xl:w-1/3 w-full px-2 " key={index}>
+            <Link to={`/branches/${branch}/Championships/${e.champ_id}`} className="xl:w-1/3 w-full px-2 " key={index}>
               <div className="bg-white border border-gray-200 rounded-2xl shadow-md overflow-hidden " >
                 <img
                   src={`${mainUrl}${e.image}`}

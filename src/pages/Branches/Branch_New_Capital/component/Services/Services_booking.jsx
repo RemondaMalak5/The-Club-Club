@@ -13,7 +13,7 @@ const Services_booking = () => {
   const total = basePrice * quantity * (1 - discount);
 
   return (
-    <div className='w-1/4  '>
+    <div className='xl:w-1/4  w-full '>
       <button className='bg-[#00786F] text-white w-full p-3'>
        Book Now
       </button>

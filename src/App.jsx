@@ -30,6 +30,8 @@ import Services_details_Capital from "./pages/Branches/Branch_New_Capital/compon
 import NewsDetails_capital from "./pages/Branches/Branch_New_Capital/component/News/NewsDetails_capital";
 import Championships_capital from "./pages/Branches/Branch_New_Capital/Pages/Championships_capital";
 import About_capital from "./pages/Branches/Branch_New_Capital/Pages/About_capital";
+import { Championships_Details } from "./pages/Branches/Branch_New_Capital/axiosConfig/APIs/Championships/championshipDetails";
+import Loyalty_Capital from "./pages/Branches/Branch_New_Capital/Pages/Loyalty_Capital";
 
 const router = createBrowserRouter([
   {
@@ -48,76 +50,78 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/branches",
-    element: (
-      <ProtectedRoute>
-        <Main_Layout />
-      </ProtectedRoute>
-    ),
-    children: [
-      {
-        path: "6-october",
-        children: [
-          { index: true, element: <October_Home /> },
-          { path: "news", element: <News /> },
-          { path: "news/:id", element: <NewsDetails /> },
-          { path: "services", element: <Services /> },
-          { path: "services/details", element: <Services_details /> },
-          { path: "loyalty", element: <Loyalty /> },
-          { path: "loyalty/:id", element: <LoyaltyDetails /> },
-          { path: "championships", element: <Championships /> },
-          { path: "championships/:id", element: <ChampionshipsDetails /> },
-          {path:"profile", element: <Profile/>},          
-          {
-            path: "about",
-            element: <About />,
-            children: [
-              { path: "about-the-club", element: <About_the_club /> },
-              { path: "board-chairman-word", element: <Board_ChairmanWord /> },
-              { path: "board-member", element: <Boardmember /> },
-              { path: "strategic-plans", element: <Strategic_Plans /> },
-              { path: "teamwork", element: <Teamwork /> },
-              { path: "contact-us", element: <Contactus /> },
-              { path: "minister-welcome", element: <Minister_welcom /> },
-            ],
-          },
-        ],
-      },
-
-      {
-        path: "capital",
-        children: [
-          { index: true, element: <New_Capital_Home/> },
-          { path: "news", element: <News_Capital/> },
-          { path: "news/:id", element: <NewsDetails_capital /> },
-          { path: "services", element: <Services_Capital /> },
-          { path: "services/details", element: <Services_details_Capital/> },
-          { path: "championships", element: <Championships_capital/> },
-          {
-            path: "about",
-            element: <About_capital />,
-            children: [
-              { path: "about-the-club", element: <About_the_club /> },
-              { path: "board-chairman-word", element: <Board_ChairmanWord /> },
-              { path: "board-member", element: <Boardmember /> },
-              { path: "strategic-plans", element: <Strategic_Plans /> },
-              { path: "teamwork", element: <Teamwork /> },
-              { path: "contact-us", element: <Contactus /> },
-              { path: "minister-welcome", element: <Minister_welcom /> },
-            ],
-          },
-        ],
-      },
-
-      {
-        path: "sheraton",
-        children: [
-          { index: true, element: <Sheraton_Home /> },
-          { path: "news-capital", element: <News_Capital/> },
-        ],
-      },
-    ],
-  },
+  path: "/branches",
+  element: <Main_Layout />,  
+  children: [
+    {
+      element: <ProtectedRoute />,     
+      children: [
+        {
+          path: "6-october",
+          children: [
+            { index: true, element: <October_Home /> },
+            { path: "news", element: <News /> },
+            { path: "news/:id", element: <NewsDetails /> },
+            { path: "services", element: <Services /> },
+            { path: "services/details", element: <Services_details /> },
+            { path: "loyalty", element: <Loyalty /> },
+            { path: "loyalty/:id", element: <LoyaltyDetails /> },
+            { path: "championships", element: <Championships /> },
+            { path: "championships/:id", element: <ChampionshipsDetails /> },
+            { path: "profile", element: <Profile /> },
+            {
+              path: "about",
+              element: <About />,
+              children: [
+                { path: "about-the-club", element: <About_the_club /> },
+                { path: "board-chairman-word", element: <Board_ChairmanWord /> },
+                { path: "board-member", element: <Boardmember /> },
+                { path: "strategic-plans", element: <Strategic_Plans /> },
+                { path: "teamwork", element: <Teamwork /> },
+                { path: "contact-us", element: <Contactus /> },
+                { path: "minister-welcome", element: <Minister_welcom /> },
+              ],
+            },
+          ],
+        },
+        {
+          path: "capital",
+          children: [
+            { index: true, element: <New_Capital_Home /> },
+            { path: "news", element: <News_Capital /> },
+            { path: "news/:id", element: <NewsDetails_capital /> },
+            { path: "services", element: <Services_Capital /> },
+            { path: "services/details", element: <Services_details_Capital /> },
+            { path: "championships", element: <Championships_capital /> },
+            {path: "championships/:id", element: <Championships_Details/> },
+            { path: "loyalty", element: <Loyalty_Capital /> },
+            { path: "profile", element: <Profile /> },
+            {
+              path: "about",
+              element: <About_capital />,
+              children: [
+                { path: "about-the-club", element: <About_the_club /> },
+                { path: "boardchairmanword", element: <Board_ChairmanWord /> },
+                { path: "board-member", element: <Boardmember /> },
+                { path: "strategic-plans", element: <Strategic_Plans /> },
+                { path: "teamwork", element: <Teamwork /> },
+                { path: "contact-us", element: <Contactus/> },
+                { path: "minister-welcome", element: <Minister_welcom /> },
+              ],
+            },
+          ],
+        },
+        {
+          path: "sheraton",
+          children: [
+            { index: true, element: <Sheraton_Home /> },
+            { path: "news-capital", element: <News_Capital /> },
+          ],
+        },
+      ],
+    },
+  ],
+}
 ]);
 
 function App() {

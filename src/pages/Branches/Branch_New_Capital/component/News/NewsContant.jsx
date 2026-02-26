@@ -14,7 +14,7 @@ import Title_1 from '../../../../../components/Shared_Componant/Title_1';
 
 const NewsContant = () => {
   const { t } = useTranslation();
-
+    const branch = localStorage.getItem("branch");
   const [data, setData] = useState(null);
   const [error, setError] = useState(false)
   const news_content_Api = async () => {
@@ -60,7 +60,7 @@ const NewsContant = () => {
         <div className='flex flex-wrap w-full'>
           {data ? <>
              {data?.map((e, index) => (
-                                <Link to={`/branches/capital/News/${e.news_id}`} className="xl:w-1/3 w-full px-2 py-2" key={index}>
+                                <Link to={`/branches/${branch}/News/${e.news_id}`} className="xl:w-1/3 w-full px-2 py-2" key={index}>
                                     <div className="bg-white border border-gray-200 rounded-2xl shadow-md overflow-hidden " key={index}>
                                         <img
                                             src={`${mainUrl}${e.image}`}

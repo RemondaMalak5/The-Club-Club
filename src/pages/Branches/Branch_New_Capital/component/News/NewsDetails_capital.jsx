@@ -11,7 +11,7 @@ import { IoTimeOutline } from 'react-icons/io5';
 
 const NewsDetails_capital = () => {
   const { t } = useTranslation();
-
+    const branch = localStorage.getItem("branch");
   const [data, setData] = useState();
   const [error, setError] = useState(false);
   const { id } = useParams();
@@ -43,7 +43,7 @@ const NewsDetails_capital = () => {
 
   return (
     <section className='px-7'>
-       <Link to="/branches/capital/News" className=' flex gap-2 pb-2 text-[#035657]'>
+       <Link to={`/branches/${branch}/News`} className=' flex gap-2 pb-2 text-[#035657]'>
         {i18next.language === 'ar' ? <FaArrowRight className='py-1 text-2xl' />
           : <FaArrowLeft className='py-1 text-2xl' />}
         <p >Back to News</p>

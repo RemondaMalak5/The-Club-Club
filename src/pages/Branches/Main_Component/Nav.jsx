@@ -30,6 +30,7 @@ const Nav = () => {
   const [errorMail, setErrorMail] = useState();
   const [errorPass, setErrorPass] = useState();
   const location = useLocation();
+  const branch = localStorage.getItem("branch");
 const currentBranch = location.pathname.split("/")[2] || "";
 
     const changeLanguage = (lng) => {
@@ -383,7 +384,7 @@ const currentBranch = location.pathname.split("/")[2] || "";
                 {t("Championships")}
               </NavLink>
             </div>
-            <div onClick={() => navigate(`/branches/6-october/profile`)}>
+            <div className="cursor-pointer " onClick={() => navigate(`/branches/${branch}/profile`)}>
               profile 
             </div>
           </div>
